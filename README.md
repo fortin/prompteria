@@ -1,2 +1,2 @@
-# promptastic
+# Promptastic
 AI Prompt Library
