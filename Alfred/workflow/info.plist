@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.fort.promptastic</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</key>
+		<dict>
+			<key>destinationuid</key>
+			<string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
+			<key>modifiers</key>
+			<integer>0</integer>
+			<key>modifiersubtext</key>
+			<string></string>
+			<key>vitoclose</key>
+			<true/>
+		</dict>
+		<key>C3D4E5F6-A7B8-9012-CDEF-345678901234</key>
+		<dict>
+			<key>destinationuid</key>
+			<string>D4E5F6A7-B8C9-0123-DEF0-456789012345</string>
+			<key>modifiers</key>
+			<integer>0</integer>
+			<key>modifiersubtext</key>
+			<string></string>
+			<key>vitoclose</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>createdby</key>
+	<string>Promptastic</string>
+	<key>description</key>
+	<string>Search and copy prompts from Promptastic</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Promptastic</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>prompts</string>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching prompts…</string>
+				<key>script</key>
+				<string>"${alfred_preferences}/workflows/${alfred_workflow_uid}/search_prompts.sh" "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search your Promptastic prompts</string>
+				<key>title</key>
+				<string>Promptastic</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>add-prompt</string>
+				<key>subtext</key>
+				<string>Add clipboard content as a new prompt</string>
+				<key>text</key>
+				<string>add-prompt</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C3D4E5F6-A7B8-9012-CDEF-345678901234</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>"${alfred_preferences}/workflows/${alfred_workflow_uid}/add_prompt.sh"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D4E5F6A7-B8C9-0123-DEF0-456789012345</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Promptastic Alfred Workflow
+
+Search and copy prompts from your Promptastic library.
+
+### Usage
+
+**Search:** Type `prompts` to search, then ↩ to copy selected prompt to clipboard.
+
+**Add:** Type `add-prompt` to add clipboard content as a new prompt (prompts for title, description, folder; uses Inbox if no folder specified).
+
+### Requirements
+
+- [Promptastic](https://github.com/promptastic) app installed with prompts created
+- Alfred 5 with Powerpack</string>
+	<key>uidata</key>
+	<dict>
+		<key>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>B2C3D4E5-F6A7-8901-BCDE-F12345678901</key>
+		<dict>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>C3D4E5F6-A7B8-9012-CDEF-345678901234</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
+		<key>D4E5F6A7-B8C9-0123-DEF0-456789012345</key>
+		<dict>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
