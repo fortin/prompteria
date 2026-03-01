@@ -1,4 +1,4 @@
-# Promptastic Documentation
+# Prompteria Documentation
 
 Production documentation for users and contributors.
 
@@ -6,7 +6,7 @@ Production documentation for users and contributors.
 
 | Document | Description |
 |----------|-------------|
-| [Installation](INSTALLATION.md) | How to install Promptastic (DMG or build from source) |
+| [Installation](INSTALLATION.md) | How to install Prompteria (DMG or build from source) |
 | [Backup & Restore](BACKUP.md) | Backing up and restoring your prompt library |
 
 ## For Contributors

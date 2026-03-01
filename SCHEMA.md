@@ -1,14 +1,14 @@
-# Promptastic Database Schema
+# Prompteria Database Schema
 
-This document describes the SQLite database schema used by Promptastic. The MCP server and other integrations connect to the same database at:
+This document describes the SQLite database schema used by Prompteria. The MCP server and other integrations connect to the same database at:
 
 ```
-~/Library/Application Support/Promptastic/prompts.db
+~/Library/Application Support/Prompteria/prompts.db
 ```
 
 **Note:** If the app is sandboxed (App Store build), the path is:
 ```
-~/Library/Containers/com.promptastic.app/Data/Library/Application Support/Promptastic/prompts.db
+~/Library/Containers/com.prompteria.app/Data/Library/Application Support/Prompteria/prompts.db
 ```
 
 ## Configuration

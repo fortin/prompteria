@@ -1,6 +1,6 @@
 # Installation Guide
 
-This guide covers all ways to install Promptastic on macOS.
+This guide covers all ways to install Prompteria on macOS.
 
 ## Requirements
 
@@ -11,9 +11,9 @@ This guide covers all ways to install Promptastic on macOS.
 
 ## Option 1: Download Pre-built Release (Recommended)
 
-1. Go to the [Releases](https://github.com/fortin/promptastic/releases) page
-2. Download the latest `Promptastic-*.dmg` file
-3. Open the DMG and drag Promptastic to your Applications folder
+1. Go to the [Releases](https://github.com/fortin/prompteria/releases) page
+2. Download the latest `Prompteria-*.dmg` file
+3. Open the DMG and drag Prompteria to your Applications folder
 4. **First launch (unsigned builds only):** Right-click the app → **Open**, then confirm in the dialog
 
 > **Note:** Official releases are signed and notarized—no right-click needed. Builds from forks or CI may be unsigned; use Right-click → Open for those.
@@ -33,14 +33,14 @@ For developers or users who prefer to build from source:
 
 ```bash
 # Clone the repository
-git clone https://github.com/fortin/promptastic.git
-cd promptastic
+git clone https://github.com/fortin/prompteria.git
+cd prompteria
 
 # Generate Xcode project
 xcodegen generate
 
 # Open in Xcode and build (⌘R)
-open Promptastic.xcodeproj
+open Prompteria.xcodeproj
 ```
 
 ### Build a Release DMG
@@ -49,7 +49,7 @@ open Promptastic.xcodeproj
 ./scripts/build-release.sh 1.0.0
 ```
 
-The DMG will be created at `build/Promptastic-1.0.0.dmg`.
+The DMG will be created at `build/Prompteria-1.0.0.dmg`.
 
 For a nicer DMG with an Applications shortcut, install [create-dmg](https://github.com/create-dmg/create-dmg):
 
@@ -62,10 +62,10 @@ brew install create-dmg
 
 ## Data Location
 
-After installation, Promptastic stores your prompt library at:
+After installation, Prompteria stores your prompt library at:
 
 ```
-~/Library/Application Support/Promptastic/prompts.db
+~/Library/Application Support/Prompteria/prompts.db
 ```
 
 Backup and restore uses this database. See [Backup & Restore](BACKUP.md) for details.
@@ -74,5 +74,5 @@ Backup and restore uses this database. See [Backup & Restore](BACKUP.md) for det
 
 ## Uninstalling
 
-1. Move Promptastic from Applications to Trash
-2. (Optional) Delete your data: `rm -rf ~/Library/Application\ Support/Promptastic`
+1. Move Prompteria from Applications to Trash
+2. (Optional) Delete your data: `rm -rf ~/Library/Application\ Support/Prompteria`

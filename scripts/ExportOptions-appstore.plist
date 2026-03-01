@@ -10,10 +10,10 @@
 	<string>Apple Distribution</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<!-- Replace "Mac App Store com.promptastic.app" with your profile name -->
+		<!-- Replace "Mac App Store com.prompteria.app" with your profile name -->
 		<!-- Find it: Xcode → Signing & Capabilities → Provisioning Profile -->
-		<key>com.promptastic.app</key>
-		<string>Mac App Store com.promptastic.app</string>
+		<key>com.prompteria.app</key>
+		<string>Mac App Store com.prompteria.app</string>
 	</dict>
 </dict>
 </plist>

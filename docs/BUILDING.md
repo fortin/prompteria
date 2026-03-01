@@ -1,6 +1,6 @@
 # Building Guide
 
-This document is for contributors and maintainers who want to build Promptastic from source or create releases.
+This document is for contributors and maintainers who want to build Prompteria from source or create releases.
 
 ## Prerequisites
 
@@ -13,9 +13,9 @@ This document is for contributors and maintainers who want to build Promptastic 
 ## Project Structure
 
 ```
-promptastic/
+prompteria/
 ├── project.yml          # XcodeGen project spec (source of truth)
-├── Promptastic/        # App source code
+├── Prompteria/          # App source code
 ├── scripts/
 │   └── build-release.sh
 └── .github/workflows/
@@ -29,7 +29,7 @@ promptastic/
 xcodegen generate
 
 # Open in Xcode
-open Promptastic.xcodeproj
+open Prompteria.xcodeproj
 
 # Build and run: ⌘R
 ```
@@ -53,7 +53,7 @@ See [Code Signing](CODE_SIGNING.md) for full setup.
 ./scripts/export-mas.sh
 ```
 
-Output: `build/Promptastic-mas/` containing the signed app or pkg for upload to App Store Connect.
+Output: `build/Prompteria-mas/` containing the signed app or pkg for upload to App Store Connect.
 
 Requires Apple Distribution certificate and Mac App Store provisioning profile. See [Code Signing](CODE_SIGNING.md).
 

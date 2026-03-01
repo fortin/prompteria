@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050BA6D8A1B54C14CD5FE4F9 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC355BB52055EA61B48804 /* Schema.swift */; };
+		0EA551553BAD0CC5FD756154 /* PromptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D2323A4A623A8C5873985C /* PromptEditorView.swift */; };
+		18D6E54A2AE1B1984E9D5343 /* EmptyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B07C5008C972D1B738014F /* EmptyContentView.swift */; };
+		1FFC3A4922A15D83BA990802 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = EF9DAC802762DFA1AECD5CC3 /* GRDB */; };
+		229662C03BB500AC7961F02E /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E38E2A1F6899C666FDE86 /* ColorPickerView.swift */; };
+		237F7C7DDBB81BD81A86E9C8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCE98009A31777E7A281AF /* AppState.swift */; };
+		35BD0EE4CA59457746CE340D /* ClipboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */; };
+		40A4D60491523565E4C1BC1C /* FormatPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5465E49E96310321D951D3C /* FormatPreviewView.swift */; };
+		4B5B0F8B2A085ED3AE0E075D /* PromptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */; };
+		51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FDD89B9492AFF3A1351A2 /* SearchService.swift */; };
+		594F7F56AF3587C95FC4926B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E90DE0841FFBB54DB85279 /* Theme.swift */; };
+		5A026BBB4A3C342E5F7FDD70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647518E36477D410BC30F65 /* SettingsView.swift */; };
+		6E1FB332D75EFAE3AC3DCB14 /* FolderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB354A889C78E22CCDEF99F /* FolderService.swift */; };
+		734DEE5B0FFDA3A70B0CF8BC /* BulkActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5110333D097C14EEB3C82E /* BulkActionsView.swift */; };
+		74CA72BDFB2B98ADAC999CE4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A66B35EE2F22FF03E7BFF /* MainView.swift */; };
+		79DFDC0586E12232A8A79575 /* SyntaxHighlightedEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */; };
+		9B09FBA5C163050E2F92B0DE /* PromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC4A3DBED279E122C713B56 /* PromptService.swift */; };
+		9D72B02432590D347FE8E873 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD69622A5E4D76418B9B3FA /* SidebarView.swift */; };
+		A2944FF878895BE733D4524C /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA703860D201F21AACD4873 /* EmojiPickerView.swift */; };
+		ABA426EB074E8471E331B0BB /* PromptPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */; };
+		AFF03CE465F56B592E16A87A /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868795CDBA855A8A1F0BFCD /* ThemeService.swift */; };
+		C2202B976CEBA86D744BA901 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = AFDB6138273DAA274C34F03F /* Down */; };
+		CE4F10368FCEA45E4C973158 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D260CC5E2D09F0C01239FD /* Prompt.swift */; };
+		CF5014294AE4E96DB222DC53 /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */; };
+		DAA1B7EDAF7AD0D21E4C0C68 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33518014AD3A6A3533DCEE7A /* DatabaseManager.swift */; };
+		DC38EC4F043F03A718C46B36 /* MoveToFolderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1011FB5850AB04F653F2F89 /* MoveToFolderSheet.swift */; };
+		E06BB640466A84CDF8DEF527 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BDB50BECD8D808BC795D5 /* Color+Hex.swift */; };
+		E27AE421D37F51123F01A754 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA22E1533D1E6ECF364255 /* Folder.swift */; };
+		E8555FB798EF11FC8DE3BB23 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351587A435D010026EC930A /* BackupService.swift */; };
+		ED22DD69EF62EF77010233F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B5536AF9A61958905F0FF /* AppDelegate.swift */; };
+		F27BBF7707904CBE0938A4A8 /* PromptDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684626726F34D68A84AF54B /* PromptDetailView.swift */; };
+		FB93EEA5B6A1A07D48B56279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03031A63E88E509C4F42DFD1 /* ContentView.swift */; };
+		FBC0C47D827A1ADE93DAD300 /* PrompteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49743759584E0D58EA10FF7C /* PrompteriaApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03031A63E88E509C4F42DFD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0DD69622A5E4D76418B9B3FA /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
+		2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightedEditor.swift; sourceTree = "<group>"; };
+		2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPreviewView.swift; sourceTree = "<group>"; };
+		32D889699DC04A2CD65056CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3351587A435D010026EC930A /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		33518014AD3A6A3533DCEE7A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		358B5536AF9A61958905F0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376E38E2A1F6899C666FDE86 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		49743759584E0D58EA10FF7C /* PrompteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompteriaApp.swift; sourceTree = "<group>"; };
+		4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardService.swift; sourceTree = "<group>"; };
+		60E90DE0841FFBB54DB85279 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		63FA22E1533D1E6ECF364255 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		6647518E36477D410BC30F65 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6868795CDBA855A8A1F0BFCD /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		6AA703860D201F21AACD4873 /* EmojiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptRowView.swift; sourceTree = "<group>"; };
+		76D2323A4A623A8C5873985C /* PromptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptEditorView.swift; sourceTree = "<group>"; };
+		95BC355BB52055EA61B48804 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		9A54640C671CA7836B861E15 /* Prompteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prompteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A22FDD89B9492AFF3A1351A2 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		AF7A66B35EE2F22FF03E7BFF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C0CCE98009A31777E7A281AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C1B07C5008C972D1B738014F /* EmptyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyContentView.swift; sourceTree = "<group>"; };
+		CF5110333D097C14EEB3C82E /* BulkActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkActionsView.swift; sourceTree = "<group>"; };
+		DA0BDB50BECD8D808BC795D5 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		E1011FB5850AB04F653F2F89 /* MoveToFolderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToFolderSheet.swift; sourceTree = "<group>"; };
+		E5465E49E96310321D951D3C /* FormatPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatPreviewView.swift; sourceTree = "<group>"; };
+		E684626726F34D68A84AF54B /* PromptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptDetailView.swift; sourceTree = "<group>"; };
+		EEB354A889C78E22CCDEF99F /* FolderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderService.swift; sourceTree = "<group>"; };
+		F0D260CC5E2D09F0C01239FD /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		F81200DB9518F90DF42D4033 /* Prompteria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Prompteria.entitlements; sourceTree = "<group>"; };
+		FDC4A3DBED279E122C713B56 /* PromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E69286CA0A116718C572D7AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFC3A4922A15D83BA990802 /* GRDB in Frameworks */,
+				C2202B976CEBA86D744BA901 /* Down in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04FC954A670F8A45A0104CC9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6647518E36477D410BC30F65 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		39E2A864F53B0CBC2FFF1542 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A54640C671CA7836B861E15 /* Prompteria.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C38D7716189A9675752671D = {
+			isa = PBXGroup;
+			children = (
+				BE5DE03A1FA082DF58B1AEDD /* Prompteria */,
+				39E2A864F53B0CBC2FFF1542 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F6A3375BB79010B0A0BF750 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				376E38E2A1F6899C666FDE86 /* ColorPickerView.swift */,
+				6AA703860D201F21AACD4873 /* EmojiPickerView.swift */,
+				E5465E49E96310321D951D3C /* FormatPreviewView.swift */,
+				2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4F8DAD4333A08B1F2A50CA6B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3351587A435D010026EC930A /* BackupService.swift */,
+				4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */,
+				EEB354A889C78E22CCDEF99F /* FolderService.swift */,
+				FDC4A3DBED279E122C713B56 /* PromptService.swift */,
+				A22FDD89B9492AFF3A1351A2 /* SearchService.swift */,
+				6868795CDBA855A8A1F0BFCD /* ThemeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		644BFDB101B1FEBBCA06070F /* Bulk */ = {
+			isa = PBXGroup;
+			children = (
+				CF5110333D097C14EEB3C82E /* BulkActionsView.swift */,
+				E1011FB5850AB04F653F2F89 /* MoveToFolderSheet.swift */,
+			);
+			path = Bulk;
+			sourceTree = "<group>";
+		};
+		6E70EEB2862CF2A90F0BF670 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA224BF72E2FAB0BDCC01CA3 /* Database */,
+				63FA22E1533D1E6ECF364255 /* Folder.swift */,
+				F0D260CC5E2D09F0C01239FD /* Prompt.swift */,
+				60E90DE0841FFBB54DB85279 /* Theme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D0FC15E7B3573DF375E8675 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA0BDB50BECD8D808BC795D5 /* Color+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DBFD22C50969DF88F4CF1E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32D889699DC04A2CD65056CB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA224BF72E2FAB0BDCC01CA3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				33518014AD3A6A3533DCEE7A /* DatabaseManager.swift */,
+				95BC355BB52055EA61B48804 /* Schema.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B1396AB4C41E5E6711BD5360 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				03031A63E88E509C4F42DFD1 /* ContentView.swift */,
+				C1B07C5008C972D1B738014F /* EmptyContentView.swift */,
+				1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */,
+				AF7A66B35EE2F22FF03E7BFF /* MainView.swift */,
+				6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */,
+				0DD69622A5E4D76418B9B3FA /* SidebarView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BC322575CC13BABDFFD08171 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				358B5536AF9A61958905F0FF /* AppDelegate.swift */,
+				C0CCE98009A31777E7A281AF /* AppState.swift */,
+				49743759584E0D58EA10FF7C /* PrompteriaApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BE5DE03A1FA082DF58B1AEDD /* Prompteria */ = {
+			isa = PBXGroup;
+			children = (
+				BC322575CC13BABDFFD08171 /* App */,
+				4F6A3375BB79010B0A0BF750 /* Components */,
+				7D0FC15E7B3573DF375E8675 /* Extensions */,
+				6E70EEB2862CF2A90F0BF670 /* Models */,
+				8DBFD22C50969DF88F4CF1E9 /* Resources */,
+				4F8DAD4333A08B1F2A50CA6B /* Services */,
+				F98E297BB7CD4FB12323645B /* Views */,
+				F81200DB9518F90DF42D4033 /* Prompteria.entitlements */,
+			);
+			path = Prompteria;
+			sourceTree = "<group>";
+		};
+		EBF89119A4EF098627F604E4 /* Prompt */ = {
+			isa = PBXGroup;
+			children = (
+				E684626726F34D68A84AF54B /* PromptDetailView.swift */,
+				76D2323A4A623A8C5873985C /* PromptEditorView.swift */,
+				2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */,
+			);
+			path = Prompt;
+			sourceTree = "<group>";
+		};
+		F98E297BB7CD4FB12323645B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				644BFDB101B1FEBBCA06070F /* Bulk */,
+				B1396AB4C41E5E6711BD5360 /* Main */,
+				EBF89119A4EF098627F604E4 /* Prompt */,
+				04FC954A670F8A45A0104CC9 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3E2331258607AED5196925E /* Prompteria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71947A0C8101E9F5DFF5BF0C /* Build configuration list for PBXNativeTarget "Prompteria" */;
+			buildPhases = (
+				AAC52BA32717259EC7F7D655 /* Sources */,
+				E69286CA0A116718C572D7AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Prompteria;
+			packageProductDependencies = (
+				EF9DAC802762DFA1AECD5CC3 /* GRDB */,
+				AFDB6138273DAA274C34F03F /* Down */,
+			);
+			productName = Prompteria;
+			productReference = 9A54640C671CA7836B861E15 /* Prompteria.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F60A3D44236A7174E517D02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 06BB2A125F9B2769170BAC8A /* Build configuration list for PBXProject "Prompteria" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3C38D7716189A9675752671D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DE7E684880124DA5FD8DAA86 /* XCRemoteSwiftPackageReference "Down" */,
+				71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3E2331258607AED5196925E /* Prompteria */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC52BA32717259EC7F7D655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED22DD69EF62EF77010233F0 /* AppDelegate.swift in Sources */,
+				237F7C7DDBB81BD81A86E9C8 /* AppState.swift in Sources */,
+				E8555FB798EF11FC8DE3BB23 /* BackupService.swift in Sources */,
+				734DEE5B0FFDA3A70B0CF8BC /* BulkActionsView.swift in Sources */,
+				35BD0EE4CA59457746CE340D /* ClipboardService.swift in Sources */,
+				E06BB640466A84CDF8DEF527 /* Color+Hex.swift in Sources */,
+				229662C03BB500AC7961F02E /* ColorPickerView.swift in Sources */,
+				FB93EEA5B6A1A07D48B56279 /* ContentView.swift in Sources */,
+				DAA1B7EDAF7AD0D21E4C0C68 /* DatabaseManager.swift in Sources */,
+				A2944FF878895BE733D4524C /* EmojiPickerView.swift in Sources */,
+				18D6E54A2AE1B1984E9D5343 /* EmptyContentView.swift in Sources */,
+				CF5014294AE4E96DB222DC53 /* EmptyDetailView.swift in Sources */,
+				E27AE421D37F51123F01A754 /* Folder.swift in Sources */,
+				6E1FB332D75EFAE3AC3DCB14 /* FolderService.swift in Sources */,
+				40A4D60491523565E4C1BC1C /* FormatPreviewView.swift in Sources */,
+				74CA72BDFB2B98ADAC999CE4 /* MainView.swift in Sources */,
+				DC38EC4F043F03A718C46B36 /* MoveToFolderSheet.swift in Sources */,
+				CE4F10368FCEA45E4C973158 /* Prompt.swift in Sources */,
+				F27BBF7707904CBE0938A4A8 /* PromptDetailView.swift in Sources */,
+				0EA551553BAD0CC5FD756154 /* PromptEditorView.swift in Sources */,
+				ABA426EB074E8471E331B0BB /* PromptPreviewView.swift in Sources */,
+				4B5B0F8B2A085ED3AE0E075D /* PromptRowView.swift in Sources */,
+				9B09FBA5C163050E2F92B0DE /* PromptService.swift in Sources */,
+				FBC0C47D827A1ADE93DAD300 /* PrompteriaApp.swift in Sources */,
+				050BA6D8A1B54C14CD5FE4F9 /* Schema.swift in Sources */,
+				51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */,
+				5A026BBB4A3C342E5F7FDD70 /* SettingsView.swift in Sources */,
+				9D72B02432590D347FE8E873 /* SidebarView.swift in Sources */,
+				79DFDC0586E12232A8A79575 /* SyntaxHighlightedEditor.swift in Sources */,
+				594F7F56AF3587C95FC4926B /* Theme.swift in Sources */,
+				AFF03CE465F56B592E16A87A /* ThemeService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B63EE5092537267FBF75CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 001;
+				DEVELOPMENT_TEAM = M2FHQ674JJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.5-beta.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4139943F55640D253891936F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		519EF07892DC98813D0D6CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 001;
+				DEVELOPMENT_TEAM = M2FHQ674JJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.5-beta.1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B01B1D9E33E3CCD279A35735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06BB2A125F9B2769170BAC8A /* Build configuration list for PBXProject "Prompteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4139943F55640D253891936F /* Debug */,
+				B01B1D9E33E3CCD279A35735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		71947A0C8101E9F5DFF5BF0C /* Build configuration list for PBXNativeTarget "Prompteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				519EF07892DC98813D0D6CED /* Debug */,
+				3B63EE5092537267FBF75CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		DE7E684880124DA5FD8DAA86 /* XCRemoteSwiftPackageReference "Down" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnxnguyen/Down";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFDB6138273DAA274C34F03F /* Down */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE7E684880124DA5FD8DAA86 /* XCRemoteSwiftPackageReference "Down" */;
+			productName = Down;
+		};
+		EF9DAC802762DFA1AECD5CC3 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8F60A3D44236A7174E517D02 /* Project object */;
+}

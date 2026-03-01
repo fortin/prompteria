@@ -1,5 +1,5 @@
 #!/bin/bash
-# Alfred Script Filter for Promptastic
+# Alfred Script Filter for Prompteria
 # Queries prompts.db and outputs Alfred JSON format
 # Usage: ./search_prompts.sh [query]
 # Output: Alfred Script Filter JSON with prompt items
@@ -12,8 +12,8 @@ fi
 [[ -z "$HOME" ]] && export HOME=$(eval echo ~$(id -un 2>/dev/null))
 
 # Check both standard and sandboxed (App Store) database paths
-DB_STANDARD="$HOME/Library/Application Support/Promptastic/prompts.db"
-DB_SANDBOXED="$HOME/Library/Containers/com.promptastic.app/Data/Library/Application Support/Promptastic/prompts.db"
+DB_STANDARD="$HOME/Library/Application Support/Prompteria/prompts.db"
+DB_SANDBOXED="$HOME/Library/Containers/com.prompteria.app/Data/Library/Application Support/Prompteria/prompts.db"
 
 QUERY="${1:-}"
 
@@ -23,7 +23,7 @@ if [[ -f "$DB_STANDARD" ]]; then
 elif [[ -f "$DB_SANDBOXED" ]]; then
     DB_PATH="$DB_SANDBOXED"
 else
-    echo '{"items":[{"title":"Promptastic database not found","subtitle":"Install Promptastic and create some prompts first","valid":false}]}'
+    echo '{"items":[{"title":"Prompteria database not found","subtitle":"Install Prompteria and create some prompts first","valid":false}]}'
     exit 0
 fi
 
@@ -68,7 +68,7 @@ fi
 if [[ -z "$RESULTS" || "$RESULTS" == "[]" ]]; then
     # Debug: write to workflow folder and stderr (visible in Alfred debugger)
     WORKFLOW_DIR="$(cd "$(dirname "$0")" && pwd)"
-    DEBUG_FILE="$WORKFLOW_DIR/promptastic-debug.txt"
+    DEBUG_FILE="$WORKFLOW_DIR/prompteria-debug.txt"
     {
         echo "=== $(date) ==="
         echo "Script: $0 | WORKFLOW_DIR=$WORKFLOW_DIR"

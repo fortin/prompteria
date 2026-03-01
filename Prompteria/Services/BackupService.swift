@@ -41,7 +41,7 @@ struct SnippetVariable: Codable {
     let endIndex: Int?
 }
 
-// MARK: - Promptastic Backup Format
+// MARK: - Prompteria Backup Format
 
 struct BackupData: Codable {
     let version: Int

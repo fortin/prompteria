@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.fort.promptastic</string>
+	<string>com.fort.prompteria</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -32,13 +32,13 @@
 		</dict>
 	</dict>
 	<key>createdby</key>
-	<string>Promptastic</string>
+	<string>Prompteria</string>
 	<key>description</key>
-	<string>Search and copy prompts from Promptastic</string>
+	<string>Search and copy prompts from Prompteria</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Promptastic</string>
+	<string>Prompteria</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -69,9 +69,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Search your Promptastic prompts</string>
+				<string>Search your Prompteria prompts</string>
 				<key>title</key>
-				<string>Promptastic</string>
+				<string>Prompteria</string>
 				<key>type</key>
 				<integer>11</integer>
 				<key>withspace</key>
@@ -149,9 +149,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Promptastic Alfred Workflow
+	<string>## Prompteria Alfred Workflow
 
-Search and copy prompts from your Promptastic library.
+Search and copy prompts from your Prompteria library.
 
 ### Usage
 
@@ -161,7 +161,7 @@ Search and copy prompts from your Promptastic library.
 
 ### Requirements
 
-- [Promptastic](https://github.com/promptastic) app installed with prompts created
+- [Prompteria](https://github.com/fortin/prompteria) app installed with prompts created
 - Alfred 5 with Powerpack</string>
 	<key>uidata</key>
 	<dict>

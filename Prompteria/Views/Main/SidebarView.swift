@@ -75,7 +75,7 @@ struct SidebarView: View {
                 }
             }
         }
-        .navigationTitle("Promptastic")
+        .navigationTitle("Prompteria")
         .popover(isPresented: Binding(
             get: { showEmojiPickerForFolderId != nil },
             set: { if !$0 { showEmojiPickerForFolderId = nil } }

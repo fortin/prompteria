@@ -1,6 +1,6 @@
 # Release Process
 
-This document describes how to create and publish a new Promptastic release.
+This document describes how to create and publish a new Prompteria release.
 
 ## First-Time Setup
 

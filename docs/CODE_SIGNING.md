@@ -18,8 +18,8 @@ This guide walks you through setting up code signing for both **direct distribut
 1. Go to [developer.apple.com](https://developer.apple.com) → **Certificates, Identifiers & Profiles**
 2. **Identifiers** → **+** → **App IDs**
 3. Select **App** → Continue
-4. Description: `Promptastic`
-5. Bundle ID: **Explicit** → `com.promptastic.app`
+4. Description: `Prompteria`
+5. Bundle ID: **Explicit** → `com.prompteria.app`
 6. Capabilities: Enable **App Sandbox** (required for Mac App Store)
 7. Register
 
@@ -44,9 +44,9 @@ This guide walks you through setting up code signing for both **direct distribut
 ### 1.3 Create Mac App Store Provisioning Profile
 
 1. **Profiles** → **+** → **Mac App Store** (under Distribution) → Continue
-2. Select App ID: `com.promptastic.app` → Continue
+2. Select App ID: `com.prompteria.app` → Continue
 3. Select **Apple Distribution** certificate → Continue
-4. Profile Name: `Mac App Store com.promptastic.app` (or your choice)
+4. Profile Name: `Mac App Store com.prompteria.app` (or your choice)
 5. Generate → Download → Double-click to install
 
 **Important:** Note the exact profile name. You'll need it for `ExportOptions-appstore.plist`.
@@ -68,8 +68,8 @@ DEVELOPMENT_TEAM: ABC123XYZ0  # Find in Xcode → Settings → Accounts
 Edit `scripts/ExportOptions-appstore.plist` and set the profile name to match what you created:
 
 ```xml
-<key>com.promptastic.app</key>
-<string>Mac App Store com.promptastic.app</string>  <!-- Your profile name -->
+<key>com.prompteria.app</key>
+<string>Mac App Store com.prompteria.app</string>  <!-- Your profile name -->
 ```
 
 ---
@@ -82,7 +82,7 @@ Edit `scripts/ExportOptions-appstore.plist` and set the profile name to match wh
 ./scripts/build-release.sh 1.0.0
 ```
 
-This produces `build/Promptastic-1.0.0.dmg` signed with Developer ID.
+This produces `build/Prompteria-1.0.0.dmg` signed with Developer ID.
 
 ### 3.2 Notarization
 
@@ -105,7 +105,7 @@ The script will submit the DMG to Apple, wait for notarization, and staple the t
 ### 3.3 Verify Notarization
 
 ```bash
-spctl -a -v -t install build/Promptastic-1.0.0.dmg
+spctl -a -v -t install build/Prompteria-1.0.0.dmg
 # Should show: accepted, source=Notarized Developer ID
 ```
 
@@ -118,8 +118,8 @@ spctl -a -v -t install build/Promptastic-1.0.0.dmg
 1. Go to [appstoreconnect.apple.com](https://appstoreconnect.apple.com)
 2. **My Apps** → **+** → **New App**
 3. Platform: **macOS**
-4. Name: **Promptastic**
-5. Bundle ID: Select `com.promptastic.app`
+4. Name: **Prompteria**
+5. Bundle ID: Select `com.prompteria.app`
 6. Create
 
 ### 4.2 Export for Submission
@@ -128,14 +128,14 @@ spctl -a -v -t install build/Promptastic-1.0.0.dmg
 ./scripts/export-mas.sh
 ```
 
-Output: `build/Promptastic-mas/` containing the signed app or pkg.
+Output: `build/Prompteria-mas/` containing the signed app or pkg.
 
 ### 4.3 Upload
 
 **Option A: Transporter app**
 
 1. Install [Transporter](https://apps.apple.com/app/transporter/id1450874784) from Mac App Store
-2. Drag the `.pkg` or `.app` from `build/Promptastic-mas/` into Transporter
+2. Drag the `.pkg` or `.app` from `build/Prompteria-mas/` into Transporter
 3. Deliver
 
 **Option B: Xcode Organizer**
@@ -147,7 +147,7 @@ Output: `build/Promptastic-mas/` containing the signed app or pkg.
 **Option C: Command line**
 
 ```bash
-xcrun altool --upload-app -f build/Promptastic-mas/Promptastic.pkg \
+xcrun altool --upload-app -f build/Prompteria-mas/Prompteria.pkg \
   -u your@email.com -p @keychain:AC_PASSWORD
 ```
 
@@ -155,7 +155,7 @@ xcrun altool --upload-app -f build/Promptastic-mas/Promptastic.pkg \
 
 ## Part 5: Entitlements Reference
 
-The app uses these entitlements (in `Promptastic.entitlements`):
+The app uses these entitlements (in `Prompteria.entitlements`):
 
 | Entitlement | Purpose |
 |-------------|---------|
@@ -174,7 +174,7 @@ The app uses these entitlements (in `Promptastic.entitlements`):
 ### "Provisioning profile doesn't include the application-identifier"
 
 - Regenerate the profile in Developer Portal
-- Ensure App ID matches exactly: `com.promptastic.app`
+- Ensure App ID matches exactly: `com.prompteria.app`
 
 ### Notarization fails: "The binary uses an SDK older than"
 

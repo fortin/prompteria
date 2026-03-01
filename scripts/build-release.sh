@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build Promptastic for direct distribution (Developer ID) and create a signed, notarized DMG.
+# Build Prompteria for direct distribution (Developer ID) and create a signed, notarized DMG.
 #
 # Prerequisites:
 #   - Apple Developer account with Developer ID Application certificate
@@ -16,8 +16,8 @@ PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_DIR"
 
 VERSION="${1:-$(git describe --tags --always 2>/dev/null || echo 'dev')}"
-APP_NAME="Promptastic"
-SCHEME="Promptastic"
+APP_NAME="Prompteria"
+SCHEME="Prompteria"
 ARCHIVE_NAME="${APP_NAME}.xcarchive"
 BUILD_DIR="$PROJECT_DIR/build"
 DMG_NAME="${APP_NAME}-${VERSION}.dmg"
@@ -36,7 +36,7 @@ else
 fi
 
 # Ensure Xcode project exists
-if [ ! -f "Promptastic.xcodeproj/project.pbxproj" ]; then
+if [ ! -f "Prompteria.xcodeproj/project.pbxproj" ]; then
     echo "Generating Xcode project..."
     if command -v xcodegen &> /dev/null; then
         xcodegen generate
@@ -147,4 +147,4 @@ echo ""
 echo "✓ Build complete!"
 echo "  DMG: $BUILD_DIR/$DMG_NAME"
 echo ""
-echo "To install: Open the DMG and drag Promptastic to Applications."
+echo "To install: Open the DMG and drag Prompteria to Applications."

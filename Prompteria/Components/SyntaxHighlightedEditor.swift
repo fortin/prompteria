@@ -17,7 +17,7 @@ struct SyntaxHighlightedEditor: NSViewRepresentable {
         scrollView.drawsBackground = true
         scrollView.backgroundColor = theme.sourceTextBackground
 
-        let textView = PromptasticTextView()
+        let textView = PrompteriaTextView()
         textView.isEditable = true
         textView.isSelectable = true
         textView.allowsUndo = true
@@ -43,7 +43,7 @@ struct SyntaxHighlightedEditor: NSViewRepresentable {
     }
 
     func updateNSView(_ scrollView: NSScrollView, context: Context) {
-        guard let textView = scrollView.documentView as? PromptasticTextView else { return }
+        guard let textView = scrollView.documentView as? PrompteriaTextView else { return }
         let coordinator = context.coordinator
 
         if textView.string != text {
@@ -64,7 +64,7 @@ struct SyntaxHighlightedEditor: NSViewRepresentable {
 
     class Coordinator: NSObject, NSTextViewDelegate {
         var parent: SyntaxHighlightedEditor
-        weak var textView: PromptasticTextView?
+        weak var textView: PrompteriaTextView?
         weak var scrollView: NSScrollView?
 
         init(_ parent: SyntaxHighlightedEditor) {
@@ -85,7 +85,7 @@ struct SyntaxHighlightedEditor: NSViewRepresentable {
 
 // MARK: - Custom NSTextView
 
-final class PromptasticTextView: NSTextView {
+final class PrompteriaTextView: NSTextView {
     var theme: AppTheme = .systemDark {
         didSet {
             applySyntaxHighlighting()

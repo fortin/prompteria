@@ -1,4 +1,4 @@
-# Promptastic
+# Prompteria
 
 A native macOS app for organizing, searching, and managing your AI prompt library.
 
@@ -24,19 +24,19 @@ A native macOS app for organizing, searching, and managing your AI prompt librar
 
 ### Option 1: Download Release (Recommended)
 
-1. Go to the [Releases](https://github.com/fortin/promptastic/releases) page
-2. Download the latest `Promptastic-*.dmg`
-3. Open the DMG and drag Promptastic to Applications
+1. Go to the [Releases](https://github.com/fortin/prompteria/releases) page
+2. Download the latest `Prompteria-*.dmg`
+3. Open the DMG and drag Prompteria to Applications
 4. **First launch:** Right-click the app → **Open** (required for unsigned builds)
 
 ### Option 2: Build from Source
 
 ```bash
-git clone https://github.com/fortin/promptastic.git
-cd promptastic
+git clone https://github.com/fortin/prompteria.git
+cd prompteria
 brew install xcodegen
 xcodegen generate
-open Promptastic.xcodeproj
+open Prompteria.xcodeproj
 # Build and run (⌘R)
 ```
 
@@ -53,7 +53,7 @@ See [docs/README.md](docs/README.md) for full documentation.
 Prompts are stored in:
 
 ```
-~/Library/Application Support/Promptastic/prompts.db
+~/Library/Application Support/Prompteria/prompts.db
 ```
 
 ## Alfred Integration
@@ -63,23 +63,23 @@ To search prompts from Alfred:
 1. Create a new Alfred workflow.
 2. Add a **Script Filter** input:
    - Keyword: `prompts` (or your choice)
-   - Script: `/path/to/promptastic/Alfred/search_prompts.sh`
+   - Script: `/path/to/prompteria/Alfred/search_prompts.sh`
    - Argument: `{query}`
    - Language: `/bin/bash`
 3. Add a **Run Script** action connected to the Script Filter:
    - Script: `echo "{query}" | pbcopy`
    - Or use `{arg}` to copy the selected prompt text (the `arg` from Alfred contains the full prompt text).
-4. For "Open in Promptastic", add an action that runs: `open "promptastic://prompt/{uid}"`
+4. For "Open in Prompteria", add an action that runs: `open "prompteria://prompt/{uid}"`
 
 The `search_prompts.sh` script outputs Alfred JSON. The `arg` field contains the full prompt text for copying.
 
 ## URL Scheme
 
-- `promptastic://prompt/{id}` – Opens the app and selects the prompt with the given ID.
+- `prompteria://prompt/{id}` – Opens the app and selects the prompt with the given ID.
 
 ## MCP Server
 
-The Promptastic MCP Server (separate repository) enables AI assistants to read and write your prompt library. See [SCHEMA.md](SCHEMA.md) for the database schema used by the MCP server.
+The Prompteria MCP Server (separate repository) enables AI assistants to read and write your prompt library. See [SCHEMA.md](SCHEMA.md) for the database schema used by the MCP server.
 
 ## License
 

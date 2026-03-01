@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9540E9475338B73C55D4C756"
-               BuildableName = "Promptastic.app"
-               BlueprintName = "Promptastic"
-               ReferencedContainer = "container:Promptastic.xcodeproj">
+               BlueprintIdentifier = "A3E2331258607AED5196925E"
+               BuildableName = "Prompteria.app"
+               BlueprintName = "Prompteria"
+               ReferencedContainer = "container:Prompteria.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9540E9475338B73C55D4C756"
-            BuildableName = "Promptastic.app"
-            BlueprintName = "Promptastic"
-            ReferencedContainer = "container:Promptastic.xcodeproj">
+            BlueprintIdentifier = "A3E2331258607AED5196925E"
+            BuildableName = "Prompteria.app"
+            BlueprintName = "Prompteria"
+            ReferencedContainer = "container:Prompteria.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9540E9475338B73C55D4C756"
-            BuildableName = "Promptastic.app"
-            BlueprintName = "Promptastic"
-            ReferencedContainer = "container:Promptastic.xcodeproj">
+            BlueprintIdentifier = "A3E2331258607AED5196925E"
+            BuildableName = "Prompteria.app"
+            BlueprintName = "Prompteria"
+            ReferencedContainer = "container:Prompteria.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,10 +72,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9540E9475338B73C55D4C756"
-            BuildableName = "Promptastic.app"
-            BlueprintName = "Promptastic"
-            ReferencedContainer = "container:Promptastic.xcodeproj">
+            BlueprintIdentifier = "A3E2331258607AED5196925E"
+            BuildableName = "Prompteria.app"
+            BlueprintName = "Prompteria"
+            ReferencedContainer = "container:Prompteria.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

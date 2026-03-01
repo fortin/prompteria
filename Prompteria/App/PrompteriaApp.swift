@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct PromptasticApp: App {
+struct PrompteriaApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var appState = AppState()
 

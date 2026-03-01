@@ -231,7 +231,7 @@ final class AppState: ObservableObject {
     func exportBackup() {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.json]
-        panel.nameFieldStringValue = "promptastic-backup-\(ISO8601DateFormatter().string(from: Date())).json"
+        panel.nameFieldStringValue = "prompteria-backup-\(ISO8601DateFormatter().string(from: Date())).json"
         panel.begin { response in
             guard response == .OK, let url = panel.url else { return }
             Task { @MainActor in

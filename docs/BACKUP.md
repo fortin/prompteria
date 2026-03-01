@@ -1,11 +1,11 @@
 # Backup & Restore
 
-Promptastic stores your prompt library in a local SQLite database. This document explains how to back up and restore your data.
+Prompteria stores your prompt library in a local SQLite database. This document explains how to back up and restore your data.
 
 ## Data Location
 
 ```
-~/Library/Application Support/Promptastic/prompts.db
+~/Library/Application Support/Prompteria/prompts.db
 ```
 
 The database uses SQLite with WAL (Write-Ahead Logging). Related files in the same directory:
@@ -36,10 +36,10 @@ To back up the raw database:
 
 ```bash
 # Create backup
-cp ~/Library/Application\ Support/Promptastic/prompts.db ~/Desktop/promptastic-backup.db
+cp ~/Library/Application\ Support/Prompteria/prompts.db ~/Desktop/prompteria-backup.db
 
 # Or copy the entire directory
-cp -r ~/Library/Application\ Support/Promptastic ~/Desktop/Promptastic-backup
+cp -r ~/Library/Application\ Support/Prompteria ~/Desktop/Prompteria-backup
 ```
 
 ## Clean Restore
@@ -48,14 +48,14 @@ To start fresh or restore from a manual backup:
 
 ```bash
 # Remove existing data
-rm -rf ~/Library/Application\ Support/Promptastic
+rm -rf ~/Library/Application\ Support/Prompteria
 
 # Restore from backup (if you have one)
-mkdir -p ~/Library/Application\ Support/Promptastic
-cp ~/Desktop/promptastic-backup.db ~/Library/Application\ Support/Promptastic/prompts.db
+mkdir -p ~/Library/Application\ Support/Prompteria
+cp ~/Desktop/prompteria-backup.db ~/Library/Application\ Support/Prompteria/prompts.db
 ```
 
-Then relaunch Promptastic.
+Then relaunch Prompteria.
 
 ## Schema
 

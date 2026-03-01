@@ -15,7 +15,7 @@ final class ThemeService {
 
     private var applicationSupportThemesURL: URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("Promptastic", isDirectory: true)
+            .appendingPathComponent("Prompteria", isDirectory: true)
             .appendingPathComponent("Themes", isDirectory: true)
     }
 
@@ -29,7 +29,7 @@ final class ThemeService {
 
     private var documentsThemesURL: URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("Promptastic", isDirectory: true)
+            .appendingPathComponent("Prompteria", isDirectory: true)
             .appendingPathComponent("Themes", isDirectory: true)
     }
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Alfred workflow: Add clipboard content as a new prompt to Promptastic
+# Alfred workflow: Add clipboard content as a new prompt to Prompteria
 # Prompts for title, description, folder. Uses Inbox if no folder specified.
 
 # Alfred may run with minimal env (HOME unset); derive from alfred_preferences
@@ -9,27 +9,27 @@ fi
 [[ -z "$HOME" ]] && export HOME=$(eval echo ~$(id -un 2>/dev/null))
 
 # Database path
-DB_STANDARD="$HOME/Library/Application Support/Promptastic/prompts.db"
-DB_SANDBOXED="$HOME/Library/Containers/com.promptastic.app/Data/Library/Application Support/Promptastic/prompts.db"
+DB_STANDARD="$HOME/Library/Application Support/Prompteria/prompts.db"
+DB_SANDBOXED="$HOME/Library/Containers/com.prompteria.app/Data/Library/Application Support/Prompteria/prompts.db"
 DB_PATH=""
 [[ -f "$DB_STANDARD" ]] && DB_PATH="$DB_STANDARD"
 [[ -z "$DB_PATH" && -f "$DB_SANDBOXED" ]] && DB_PATH="$DB_SANDBOXED"
 
 if [[ -z "$DB_PATH" ]]; then
-    osascript -e 'display alert "Promptastic" message "Database not found. Install Promptastic and create some prompts first."'
+    osascript -e 'display alert "Prompteria" message "Database not found. Install Prompteria and create some prompts first."'
     exit 1
 fi
 
 # Get clipboard content
 PROMPT_TEXT=$(pbpaste 2>/dev/null)
 if [[ -z "$PROMPT_TEXT" ]]; then
-    osascript -e 'display alert "Promptastic" message "Clipboard is empty. Copy some text first, then run add-prompt."'
+    osascript -e 'display alert "Prompteria" message "Clipboard is empty. Copy some text first, then run add-prompt."'
     exit 1
 fi
 
 # Prompt for title (required)
 TITLE=$(osascript 2>/dev/null <<'APPLESCRIPT'
-set d to display dialog "Enter prompt title:" default answer "" with title "Add Prompt to Promptastic" with icon note buttons {"Cancel", "OK"} default button "OK"
+set d to display dialog "Enter prompt title:" default answer "" with title "Add Prompt to Prompteria" with icon note buttons {"Cancel", "OK"} default button "OK"
 if button returned of d is "Cancel" then return "CANCEL"
 return text returned of d
 APPLESCRIPT
@@ -39,7 +39,7 @@ APPLESCRIPT
 
 # Prompt for description (optional)
 DESCRIPTION=$(osascript 2>/dev/null <<'APPLESCRIPT'
-set d to display dialog "Enter description (optional):" default answer "" with title "Add Prompt to Promptastic" with icon note buttons {"Skip", "OK"} default button "OK"
+set d to display dialog "Enter description (optional):" default answer "" with title "Add Prompt to Prompteria" with icon note buttons {"Skip", "OK"} default button "OK"
 if button returned of d is "Skip" then
     return ""
 else
@@ -50,7 +50,7 @@ APPLESCRIPT
 
 # Prompt for folder (optional, empty = Inbox)
 FOLDER_NAME=$(osascript 2>/dev/null <<'APPLESCRIPT'
-set d to display dialog "Enter folder name (leave empty for Inbox):" default answer "" with title "Add Prompt to Promptastic" with icon note buttons {"Cancel", "OK"} default button "OK"
+set d to display dialog "Enter folder name (leave empty for Inbox):" default answer "" with title "Add Prompt to Prompteria" with icon note buttons {"Cancel", "OK"} default button "OK"
 if button returned of d is "Cancel" then return "CANCEL"
 set t to text returned of d
 if t is "" then return "Inbox"
@@ -83,8 +83,8 @@ PROMPT_ID=$(uuidgen 2>/dev/null || echo "prompt-$(date +%s)-$$")
 sqlite3 "$DB_PATH" "INSERT INTO prompts (id, folder_id, title, prompt, description, notes, emoji, color, is_favorite, sort_order, created_at, updated_at) VALUES ('$PROMPT_ID', '$FOLDER_ID', '$TITLE_ESC', '$PROMPT_ESC', '$DESCRIPTION_ESC', NULL, NULL, NULL, 0, 0, datetime('now'), datetime('now'))" 2>/dev/null
 
 if [[ $? -eq 0 ]]; then
-    osascript -e "display notification \"Added to $FOLDER_NAME\" with title \"Promptastic\""
+    osascript -e "display notification \"Added to $FOLDER_NAME\" with title \"Prompteria\""
 else
-    osascript -e 'display alert "Promptastic" message "Failed to add prompt to database."'
+    osascript -e 'display alert "Prompteria" message "Failed to add prompt to database."'
     exit 1
 fi

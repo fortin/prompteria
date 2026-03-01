@@ -9,7 +9,14 @@ final class DatabaseManager {
     private init() {
         let fileManager = FileManager.default
         let appSupport = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDirectory = appSupport.appendingPathComponent("Promptastic", isDirectory: true)
+        let appDirectory = appSupport.appendingPathComponent("Prompteria", isDirectory: true)
+
+        // Migrate from Promptastic if upgrading
+        let legacyDirectory = appSupport.appendingPathComponent("Promptastic", isDirectory: true)
+        if fileManager.fileExists(atPath: legacyDirectory.path), !fileManager.fileExists(atPath: appDirectory.path) {
+            try? fileManager.createDirectory(at: appDirectory.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try? fileManager.moveItem(at: legacyDirectory, to: appDirectory)
+        }
 
         if !fileManager.fileExists(atPath: appDirectory.path) {
             try? fileManager.createDirectory(at: appDirectory, withIntermediateDirectories: true)

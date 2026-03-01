@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Export Promptastic for Mac App Store submission.
+# Export Prompteria for Mac App Store submission.
 #
 # Prerequisites:
 #   - Apple Developer account with "Apple Distribution" certificate
-#   - Mac App Store provisioning profile for com.promptastic.app
+#   - Mac App Store provisioning profile for com.prompteria.app
 #   - project.yml: Replace YOUR_TEAM_ID with your Team ID
 #   - scripts/ExportOptions-appstore.plist: Update provisioning profile name
 #
 # Usage: ./scripts/export-mas.sh
-# Output: build/Promptastic-mas/ (folder to upload via Transporter or Xcode)
+# Output: build/Prompteria-mas/ (folder to upload via Transporter or Xcode)
 
 set -e
 
@@ -16,8 +16,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_DIR"
 
-APP_NAME="Promptastic"
-SCHEME="Promptastic"
+APP_NAME="Prompteria"
+SCHEME="Prompteria"
 ARCHIVE_NAME="${APP_NAME}.xcarchive"
 BUILD_DIR="$PROJECT_DIR/build"
 EXPORT_DIR="$BUILD_DIR/${APP_NAME}-mas"
@@ -25,7 +25,7 @@ EXPORT_DIR="$BUILD_DIR/${APP_NAME}-mas"
 echo "Building ${APP_NAME} for Mac App Store..."
 
 # Ensure Xcode project exists
-if [ ! -f "Promptastic.xcodeproj/project.pbxproj" ]; then
+if [ ! -f "Prompteria.xcodeproj/project.pbxproj" ]; then
     echo "Generating Xcode project..."
     xcodegen generate
 fi

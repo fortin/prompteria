@@ -1,4 +1,4 @@
-# Build and release Promptastic as a DMG when a new tag is pushed.
+# Build and release Prompteria as a DMG when a new tag is pushed.
 # Usage: git tag v1.0.0 && git push origin v1.0.0
 
 name: Release
@@ -36,7 +36,7 @@ jobs:
       - name: Upload DMG to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/Promptastic-*.dmg
+          files: build/Prompteria-*.dmg
           generate_release_notes: true
           draft: false
         env:
