@@ -3,7 +3,7 @@
 # Queries prompts.db and outputs Alfred JSON format
 # Usage: ./search_prompts.sh [query]
 # Output: Alfred Script Filter JSON with prompt items
-# Action: Copy prompt text to clipboard. arg contains the full prompt text.
+# Action: Opens Prompteria to copy prompt (with template var dialog if needed). arg contains full prompt text.
 
 # Alfred may run with minimal env (HOME unset); derive from alfred_preferences
 if [[ -z "$HOME" && -n "$alfred_preferences" ]]; then
@@ -94,6 +94,8 @@ fi
 echo "$RESULTS" | python3 -c "
 import json
 import sys
+import tempfile
+import os
 
 try:
     rows = json.load(sys.stdin)
@@ -110,11 +112,19 @@ for row in rows:
     subtitle = folder if folder else 'No folder'
     if len(prompt_text) > 80:
         subtitle += ' • ' + prompt_text[:77] + '...'
-    subtitle += ' • Action to copy prompt to clipboard'
+    subtitle += ' • ↩ to copy via Prompteria'
+    # Write JSON file so app gets both title and prompt for notification
+    fd, path = tempfile.mkstemp(suffix='.json', prefix='prompteria-alfred-')
+    try:
+        with os.fdopen(fd, 'w') as f:
+            json.dump({'title': title, 'prompt': prompt_text}, f)
+        arg = path
+    except:
+        arg = prompt_text  # fallback to prompt only
     items.append({
         'title': title,
         'subtitle': subtitle,
-        'arg': prompt_text,
+        'arg': arg,
         'uid': prompt_id,
         'valid': True
     })

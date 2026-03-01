@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 @main
 struct PrompteriaApp: App {
@@ -12,6 +13,7 @@ struct PrompteriaApp: App {
                 .environment(\.appTheme, appState.currentTheme)
                 .preferredColorScheme(appState.themeOverride.colorScheme ?? appState.currentTheme.colorScheme)
         }
+        .handlesExternalEvents(matching: Set<String>())
         .commands {
             CommandGroup(replacing: .newItem) {}
             CommandMenu("Prompt") {

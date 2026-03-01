@@ -9,30 +9,47 @@
 	<key>connections</key>
 	<dict>
 		<key>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</key>
-		<dict>
-			<key>destinationuid</key>
-			<string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
-			<key>modifiers</key>
-			<integer>0</integer>
-			<key>modifiersubtext</key>
-			<string></string>
-			<key>vitoclose</key>
-			<true/>
-		</dict>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E5F6A7B8-C9D0-1234-5678-90ABCDEF0123</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C3D4E5F6-A7B8-9012-CDEF-345678901234</key>
-		<dict>
-			<key>destinationuid</key>
-			<string>D4E5F6A7-B8C9-0123-DEF0-456789012345</string>
-			<key>modifiers</key>
-			<integer>0</integer>
-			<key>modifiersubtext</key>
-			<string></string>
-			<key>vitoclose</key>
-			<true/>
-		</dict>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D4E5F6A7-B8C9-0123-DEF0-456789012345</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E5F6A7B8-C9D0-1234-5678-90ABCDEF0123</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Prompteria</string>
+	<string>Antonio Fortin</string>
 	<key>description</key>
 	<string>Search and copy prompts from Prompteria</string>
 	<key>disabled</key>
@@ -83,6 +100,29 @@
 			<string>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>bash "${alfred_preferences}/workflows/${alfred_workflow_uid}/open_fill_template.sh" "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E5F6A7B8-C9D0-1234-5678-90ABCDEF0123</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -155,14 +195,24 @@ Search and copy prompts from your Prompteria library.
 
 ### Usage
 
-**Search:** Type `prompts` to search, then ↩ to copy selected prompt to clipboard.
+**Search:** Type `prompts` to search, then ↩ to copy via Prompteria (app shows template var dialog if needed).
 
 **Add:** Type `add-prompt` to add clipboard content as a new prompt (prompts for title, description, folder; uses Inbox if no folder specified).
 
 ### Requirements
 
 - [Prompteria](https://github.com/fortin/prompteria) app installed with prompts created
-- Alfred 5 with Powerpack</string>
+- Alfred 5 with Powerpack
+
+### After import
+
+- Set category to **Productivity**: right-click workflow → Category → Productivity
+
+### Using the installed app
+
+By default the workflow uses the app in `/Applications` (opened by bundle ID `com.prompteria.app`). Ensure Prompteria is installed there.
+
+To use the Xcode build instead: create `prompteria_app_path.txt` in the workflow folder with the path to your `Prompteria.app` (e.g. `~/Library/Developer/Xcode/DerivedData/.../Build/Products/Debug/Prompteria.app`). Remove that file to switch back to the installed app.</string>
 	<key>uidata</key>
 	<dict>
 		<key>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</key>
@@ -173,6 +223,13 @@ Search and copy prompts from your Prompteria library.
 			<integer>200</integer>
 		</dict>
 		<key>B2C3D4E5-F6A7-8901-BCDE-F12345678901</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>E5F6A7B8-C9D0-1234-5678-90ABCDEF0123</key>
 		<dict>
 			<key>xpos</key>
 			<integer>350</integer>
@@ -194,6 +251,10 @@ Search and copy prompts from your Prompteria library.
 			<integer>400</integer>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>

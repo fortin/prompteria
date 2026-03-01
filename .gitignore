@@ -64,3 +64,6 @@ fastlane/test_output
 
 .DS_Store
 .env
+
+# Alfred workflow: user-specific app path for Xcode testing
+Alfred/workflow/prompteria_app_path.txt

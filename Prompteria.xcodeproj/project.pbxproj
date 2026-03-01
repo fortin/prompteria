@@ -41,6 +41,8 @@
 		FB93EEA5B6A1A07D48B56279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03031A63E88E509C4F42DFD1 /* ContentView.swift */; };
 		FBC0C47D827A1ADE93DAD300 /* PrompteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49743759584E0D58EA10FF7C /* PrompteriaApp.swift */; };
 		A996DBBE2F541C8B0011BF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A996DBBF2F541C8B0011BF8F /* Assets.xcassets */; };
+		F1A2B3C4D5E6F7A8B9C0D1E2 /* FillTemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E6F7A8B9C0D1E3 /* FillTemplateService.swift */; };
+		F1A2B3C4D5E6F7A8B9C0D1E4 /* FillTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E6F7A8B9C0D1E5 /* FillTemplateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		F0D260CC5E2D09F0C01239FD /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		F81200DB9518F90DF42D4033 /* Prompteria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Prompteria.entitlements; sourceTree = "<group>"; };
 		FDC4A3DBED279E122C713B56 /* PromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptService.swift; sourceTree = "<group>"; };
+		F1A2B3C4D5E6F7A8B9C0D1E3 /* FillTemplateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTemplateService.swift; sourceTree = "<group>"; };
+		F1A2B3C4D5E6F7A8B9C0D1E5 /* FillTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTemplateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			children = (
 				3351587A435D010026EC930A /* BackupService.swift */,
 				4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */,
+				F1A2B3C4D5E6F7A8B9C0D1E3 /* FillTemplateService.swift */,
 				EEB354A889C78E22CCDEF99F /* FolderService.swift */,
 				FDC4A3DBED279E122C713B56 /* PromptService.swift */,
 				A22FDD89B9492AFF3A1351A2 /* SearchService.swift */,
@@ -247,10 +252,19 @@
 			path = Prompt;
 			sourceTree = "<group>";
 		};
+		F1A2B3C4D5E6F7A8B9C0D1E6 /* FillTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2B3C4D5E6F7A8B9C0D1E5 /* FillTemplateView.swift */,
+			);
+			path = FillTemplate;
+			sourceTree = "<group>";
+		};
 		F98E297BB7CD4FB12323645B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				644BFDB101B1FEBBCA06070F /* Bulk */,
+				F1A2B3C4D5E6F7A8B9C0D1E6 /* FillTemplate */,
 				B1396AB4C41E5E6711BD5360 /* Main */,
 				EBF89119A4EF098627F604E4 /* Prompt */,
 				04FC954A670F8A45A0104CC9 /* Settings */,
@@ -349,6 +363,8 @@
 				79DFDC0586E12232A8A79575 /* SyntaxHighlightedEditor.swift in Sources */,
 				594F7F56AF3587C95FC4926B /* Theme.swift in Sources */,
 				AFF03CE465F56B592E16A87A /* ThemeService.swift in Sources */,
+				F1A2B3C4D5E6F7A8B9C0D1E2 /* FillTemplateService.swift in Sources */,
+				F1A2B3C4D5E6F7A8B9C0D1E4 /* FillTemplateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

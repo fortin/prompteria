@@ -71,7 +71,7 @@ To search prompts from Alfred:
    - Or use `{arg}` to copy the selected prompt text (the `arg` from Alfred contains the full prompt text).
 4. For "Open in Prompteria", add an action that runs: `open "prompteria://prompt/{uid}"`
 
-The `search_prompts.sh` script outputs Alfred JSON. The `arg` field contains the full prompt text for copying.
+The `search_prompts.sh` script outputs Alfred JSON. The `arg` field contains the full prompt text for copying. The pre-built `Prompteria.alfredworkflow` includes template variable support: prompts with `{{ varname }}` placeholders will prompt for values in a single dialog before copying.
 
 ## URL Scheme
 

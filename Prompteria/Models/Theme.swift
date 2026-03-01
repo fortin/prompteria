@@ -67,6 +67,7 @@ struct AppTheme: Identifiable, Equatable {
     var syntaxAttributeColor: Color { Color(nsColor: syntaxAttribute) }
     var uiBackgroundColor: Color { Color(nsColor: uiBackground) }
     var uiSecondaryBackgroundColor: Color { Color(nsColor: uiSecondaryBackground) }
+    var uiTertiaryBackgroundColor: Color { Color(nsColor: uiTertiaryBackground) }
     var uiTextColor: Color { Color(nsColor: uiText) }
     var uiSecondaryTextColor: Color { Color(nsColor: uiSecondaryText) }
     var uiAccentColor: Color { Color(nsColor: uiAccent) }

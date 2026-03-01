@@ -1,0 +1,8 @@
+# Copy this file to prompteria_app_path.txt and set the path to your Prompteria.app
+# Use when testing with the Xcode build instead of /Applications.
+#
+# To find your Xcode build path, run:
+#   find ~/Library/Developer/Xcode/DerivedData -name "Prompteria.app" -path "*/Build/Products/Debug/*" 2>/dev/null | head -1
+#
+# Example:
+# /Users/antonio/Library/Developer/Xcode/DerivedData/Prompteria-amfxyrhzhxpyzeaqmolzookffnqk/Build/Products/Debug/Prompteria.app

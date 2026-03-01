@@ -75,7 +75,7 @@ struct PromptDetailView: View {
             }
 
             Button {
-                ClipboardService.copyToClipboard(prompt.prompt)
+                FillTemplateService.showFillTemplateWindow(prompt: prompt.prompt, title: prompt.title)
             } label: {
                 Image(systemName: "doc.on.doc")
             }
