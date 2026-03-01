@@ -217,6 +217,10 @@ struct ContentView: View {
                         Button("Copy Prompt") {
                             ClipboardService.copyToClipboard(prompt.prompt)
                         }
+                        Divider()
+                        Button("Duplicate") {
+                            appState.duplicatePrompt(prompt)
+                        }
                         Button(prompt.isFavorite ? "Remove from Favourites" : "Add to Favourites") {
                             appState.toggleFavorite(prompt)
                         }

@@ -156,6 +156,24 @@ final class AppState: ObservableObject {
         }
     }
 
+    func duplicatePrompt(_ prompt: Prompt) {
+        let copy = Prompt(
+            folderId: prompt.folderId,
+            title: prompt.title + " (Copy)",
+            prompt: prompt.prompt,
+            description: prompt.description,
+            notes: prompt.notes,
+            emoji: prompt.emoji,
+            color: prompt.color,
+            isFavorite: false
+        )
+        Task {
+            try? await promptService.create(copy)
+            refresh()
+            selectedPromptId = copy.id
+        }
+    }
+
     func deletePrompt(_ prompt: Prompt) {
         Task {
             try? await promptService.delete(prompt)
