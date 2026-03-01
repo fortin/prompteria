@@ -70,6 +70,7 @@ struct AppTheme: Identifiable, Equatable {
     var uiTextColor: Color { Color(nsColor: uiText) }
     var uiSecondaryTextColor: Color { Color(nsColor: uiSecondaryText) }
     var uiAccentColor: Color { Color(nsColor: uiAccent) }
+    var uiSelectionColor: Color { Color(nsColor: uiSelection) }
 }
 
 // MARK: - Parsing

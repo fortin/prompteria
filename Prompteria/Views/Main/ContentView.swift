@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
+    @Environment(\.appTheme) private var theme
     @FocusState private var isSearchFocused: Bool
     @State private var showBulkActions = false
     @State private var showMoveToFolder = false
@@ -234,6 +235,8 @@ struct ContentView: View {
                 }
             }
             .listStyle(.inset)
+            .scrollContentBackground(.hidden)
+            .background(theme.uiBackgroundColor)
         }
     }
 }

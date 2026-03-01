@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var appState: AppState
+    @Environment(\.appTheme) private var theme
     @State private var columnVisibility: NavigationSplitViewVisibility = .all
 
     var body: some View {
@@ -18,6 +19,7 @@ struct MainView: View {
             }
         }
         .navigationSplitViewStyle(.balanced)
+        .background(theme.uiBackgroundColor)
         .task {
             await appState.loadData()
         }

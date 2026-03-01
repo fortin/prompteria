@@ -47,6 +47,7 @@ struct PrompteriaApp: App {
         Settings {
             SettingsView()
                 .environmentObject(appState)
+                .environment(\.appTheme, appState.currentTheme)
         }
     }
 }

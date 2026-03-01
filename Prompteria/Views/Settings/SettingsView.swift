@@ -19,7 +19,7 @@ struct SettingsView: View {
                     Text("Dark").tag(ThemeOverride.dark)
                 }
 
-                Picker("Editor theme", selection: Binding(
+                Picker("Theme", selection: Binding(
                     get: { appState.selectedThemeId },
                     set: { appState.setSelectedThemeId($0) }
                 )) {
@@ -28,6 +28,7 @@ struct SettingsView: View {
                     }
                 }
                 .onAppear { themes = ThemeService.shared.loadThemes() }
+                .help("Affects app appearance and editor syntax highlighting")
 
                 Button("Import .xccolortheme...") {
                     showImportSheet = true

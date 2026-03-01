@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PromptDetailView: View {
     @EnvironmentObject var appState: AppState
+    @Environment(\.appTheme) private var theme
     @State var prompt: Prompt
     @State private var isEditing = true
     @State private var showEmojiPicker = false
@@ -86,5 +87,7 @@ struct PromptDetailView: View {
             }
         }
         .padding(8)
+        .background(theme.uiSecondaryBackgroundColor)
+        .foregroundStyle(theme.uiTextColor)
     }
 }

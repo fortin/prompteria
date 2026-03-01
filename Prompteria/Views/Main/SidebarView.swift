@@ -3,6 +3,7 @@ import SwiftUI
 
 struct SidebarView: View {
     @EnvironmentObject var appState: AppState
+    @Environment(\.appTheme) private var theme
     @State private var editingFolderId: String?
     @State private var editingName: String = ""
     @State private var showEmojiPickerForFolderId: String?
@@ -28,7 +29,7 @@ struct SidebarView: View {
 
                 Text("Folders")
                     .font(.headline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(theme.uiSecondaryTextColor)
                     .padding(.horizontal, 12)
                     .padding(.top, 12)
                     .padding(.bottom, 4)
@@ -53,7 +54,7 @@ struct SidebarView: View {
                 }
             }
         }
-        .background(Color(NSColor.controlBackgroundColor))
+        .background(theme.uiBackgroundColor)
         .onChange(of: appState.sidebarSelection) { _, newValue in
             if newValue == Self.favoritesId {
                 appState.showFavoritesOnly = true
@@ -114,7 +115,7 @@ struct SidebarView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 6)
-                .background(appState.sidebarSelection == id ? Color.accentColor.opacity(0.2) : Color.clear)
+                .background(appState.sidebarSelection == id ? theme.uiSelectionColor.opacity(0.3) : Color.clear)
         }
         .buttonStyle(.plain)
     }
@@ -133,7 +134,7 @@ struct SidebarView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 12)
         .padding(.vertical, 6)
-        .background(isSelected ? Color.accentColor.opacity(0.2) : Color.clear)
+        .background(isSelected ? theme.uiSelectionColor.opacity(0.3) : Color.clear)
         .contentShape(Rectangle())
         .draggable("folder:\(folder.id)")
         .dropDestination(for: String.self) { items, _ in

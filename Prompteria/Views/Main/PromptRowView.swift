@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct PromptRowView: View {
+    @Environment(\.appTheme) private var theme
     let prompt: Prompt
     let isSelected: Bool
     let isChecked: Bool
@@ -21,7 +22,7 @@ struct PromptRowView: View {
                 onToggleFavorite()
             } label: {
                 Image(systemName: prompt.isFavorite ? "star.fill" : "star")
-                    .foregroundStyle(prompt.isFavorite ? .yellow : .secondary)
+                    .foregroundStyle(prompt.isFavorite ? theme.uiAccentColor : theme.uiSecondaryTextColor)
             }
             .buttonStyle(.plain)
 
@@ -42,7 +43,7 @@ struct PromptRowView: View {
                     Text(description)
                         .lineLimit(1)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(theme.uiSecondaryTextColor)
                 }
             }
 
