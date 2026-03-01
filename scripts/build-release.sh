@@ -94,11 +94,30 @@ rm -rf "$DMG_STAGING"
 mkdir -p "$DMG_STAGING"
 cp -R "$APP_PATH" "$DMG_STAGING/"
 
+# Build .icns from AppIcon for DMG volume icon
+APPICON_ASSETS="Prompteria/Resources/Assets.xcassets/AppIcon.appiconset"
+DMG_ICON="$BUILD_DIR/AppIcon.icns"
+if [ -d "$APPICON_ASSETS" ]; then
+    echo "Creating DMG icon from AppIcon..."
+    ICONSET="$BUILD_DIR/AppIcon.iconset"
+    rm -rf "$ICONSET"
+    mkdir -p "$ICONSET"
+    for f in "$APPICON_ASSETS"/icon_*.png; do
+        [ -f "$f" ] && cp "$f" "$ICONSET/$(basename "$f")"
+    done
+    [ -f "$APPICON_ASSETS/AppIcon.png" ] && [ ! -f "$ICONSET/icon_512x512@2x.png" ] && cp "$APPICON_ASSETS/AppIcon.png" "$ICONSET/icon_512x512@2x.png"
+    iconutil -c icns "$ICONSET" -o "$DMG_ICON"
+    rm -rf "$ICONSET"
+fi
+
 if command -v create-dmg &> /dev/null; then
     echo "Creating DMG with create-dmg..."
     rm -f "$BUILD_DIR/$DMG_NAME"
+    VOLICON_OPT=""
+    [ -f "$DMG_ICON" ] && VOLICON_OPT="--volicon $DMG_ICON"
     create-dmg \
         --volname "$APP_NAME" \
+        $VOLICON_OPT \
         --window-pos 200 120 \
         --window-size 600 400 \
         --icon-size 100 \

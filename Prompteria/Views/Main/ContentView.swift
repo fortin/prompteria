@@ -189,8 +189,11 @@ struct ContentView: View {
                         onSelect: {
                             appState.selectedPromptId = prompt.id
                             if appState.autoCopyOnSelect {
-                                ClipboardService.copyToClipboard(prompt.prompt)
+                                FillTemplateService.showFillTemplateWindow(prompt: prompt.prompt, title: prompt.title)
                             }
+                        },
+                        onCopy: {
+                            FillTemplateService.showFillTemplateWindow(prompt: prompt.prompt, title: prompt.title)
                         },
                         onToggleFavorite: {
                             appState.toggleFavorite(prompt)
@@ -215,7 +218,7 @@ struct ContentView: View {
                     .tag(prompt.id)
                     .contextMenu {
                         Button("Copy Prompt") {
-                            ClipboardService.copyToClipboard(prompt.prompt)
+                            FillTemplateService.showFillTemplateWindow(prompt: prompt.prompt, title: prompt.title)
                         }
                         Divider()
                         Button("Duplicate") {

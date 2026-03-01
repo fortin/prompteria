@@ -97,7 +97,6 @@ extension AppTheme {
         }
 
         let syntaxColors = plist["DVTSourceTextSyntaxColors"] as? [String: Any] ?? [:]
-        let isDark = (parseColor(plist["DVTSourceTextBackground"] as? String) ?? .black).luminance < 0.5
 
         return AppTheme(
             id: id,

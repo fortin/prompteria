@@ -6,6 +6,7 @@ struct PromptRowView: View {
     let isSelected: Bool
     let isChecked: Bool
     let onSelect: () -> Void
+    let onCopy: () -> Void
     let onToggleFavorite: () -> Void
     let onToggleSelection: () -> Void
 
@@ -53,6 +54,9 @@ struct PromptRowView: View {
         .contentShape(Rectangle())
         .onTapGesture {
             onSelect()
+        }
+        .onTapGesture(count: 2) {
+            onCopy()
         }
     }
 }
