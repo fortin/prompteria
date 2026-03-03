@@ -11,7 +11,7 @@ options:
 packages:
   GRDB:
     url: https://github.com/groue/GRDB.swift
-    from: "7.0.0"
+    exactVersion: "7.8.0"  # 7.9+ requires Swift 6.1; pin for CI (Xcode 16.2 has Swift 6.0)
   Down:
     url: https://github.com/johnxnguyen/Down
     from: "0.11.0"
