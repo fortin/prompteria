@@ -28,8 +28,6 @@ targets:
     platform: macOS
     sources:
       - path: Prompteria
-        excludes:
-          - "**/*.xcassets"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.prompteria.app

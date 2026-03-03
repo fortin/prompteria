@@ -21,6 +21,7 @@
 		594F7F56AF3587C95FC4926B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E90DE0841FFBB54DB85279 /* Theme.swift */; };
 		5A026BBB4A3C342E5F7FDD70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6647518E36477D410BC30F65 /* SettingsView.swift */; };
 		6E1FB332D75EFAE3AC3DCB14 /* FolderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB354A889C78E22CCDEF99F /* FolderService.swift */; };
+		719332471284E86AC59CB059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7F2E0C44EF87B954C27F82 /* Assets.xcassets */; };
 		734DEE5B0FFDA3A70B0CF8BC /* BulkActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5110333D097C14EEB3C82E /* BulkActionsView.swift */; };
 		74CA72BDFB2B98ADAC999CE4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A66B35EE2F22FF03E7BFF /* MainView.swift */; };
 		79DFDC0586E12232A8A79575 /* SyntaxHighlightedEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */; };
@@ -80,6 +81,7 @@
 		EEB354A889C78E22CCDEF99F /* FolderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderService.swift; sourceTree = "<group>"; };
 		F0D260CC5E2D09F0C01239FD /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		F81200DB9518F90DF42D4033 /* Prompteria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Prompteria.entitlements; sourceTree = "<group>"; };
+		FC7F2E0C44EF87B954C27F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC4A3DBED279E122C713B56 /* PromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		8DBFD22C50969DF88F4CF1E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC7F2E0C44EF87B954C27F82 /* Assets.xcassets */,
 				32D889699DC04A2CD65056CB /* Info.plist */,
 			);
 			path = Resources;
@@ -266,6 +269,7 @@
 			buildConfigurationList = 71947A0C8101E9F5DFF5BF0C /* Build configuration list for PBXNativeTarget "Prompteria" */;
 			buildPhases = (
 				AAC52BA32717259EC7F7D655 /* Sources */,
+				4A99B2916B1966A35F6B4F08 /* Resources */,
 				E69286CA0A116718C572D7AA /* Frameworks */,
 			);
 			buildRules = (
@@ -311,6 +315,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A99B2916B1966A35F6B4F08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719332471284E86AC59CB059 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAC52BA32717259EC7F7D655 /* Sources */ = {
