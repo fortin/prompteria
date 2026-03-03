@@ -7,7 +7,7 @@ struct ContentView: View {
     @Environment(\.appTheme) private var theme
     @FocusState private var isSearchFocused: Bool
     @State private var showBulkActions = false
-    @State private var showMoveToFolder = false
+    @State private var promptsToMove: [Prompt]?
     @State private var lastSelectedIndex: Int?
     @State private var showEmojiPickerForPromptId: String?
     @State private var showColorPickerForPromptId: String?
@@ -64,7 +64,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Button("Move to Folder...") {
-                            showMoveToFolder = true
+                            promptsToMove = selectedPrompts
                         }
                         Button("Export Selected...") {
                             exportSelected()
@@ -82,22 +82,27 @@ struct ContentView: View {
                 }
             }
         }
-        .sheet(isPresented: $showMoveToFolder) {
-            MoveToFolderSheet(
-                prompts: selectedPrompts,
-                folders: appState.folders,
-                onMove: { folderId in
-                    for prompt in selectedPrompts {
-                        appState.movePrompt(prompt, to: folderId)
+        .sheet(isPresented: Binding(
+            get: { promptsToMove != nil },
+            set: { if !$0 { promptsToMove = nil } }
+        )) {
+            if let prompts = promptsToMove {
+                MoveToFolderSheet(
+                    prompts: prompts,
+                    folders: appState.folders,
+                    onMove: { folderId in
+                        for prompt in prompts {
+                            appState.movePrompt(prompt, to: folderId)
+                        }
+                        appState.selectedPromptIds.removeAll()
+                        promptsToMove = nil
+                    },
+                    onCancel: {
+                        promptsToMove = nil
                     }
-                    appState.selectedPromptIds.removeAll()
-                    showMoveToFolder = false
-                },
-                onCancel: {
-                    showMoveToFolder = false
-                }
-            )
-            .environmentObject(appState)
+                )
+                .environmentObject(appState)
+            }
         }
         .popover(isPresented: Binding(
             get: { showEmojiPickerForPromptId != nil },
