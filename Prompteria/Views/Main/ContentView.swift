@@ -218,7 +218,8 @@ struct ContentView: View {
                                 }
                             }
                             lastSelectedIndex = index
-                        }
+                        },
+                        onMoveToFolder: appState.folders.isEmpty ? nil : { promptsToMove = [prompt] }
                     )
                     .tag(prompt.id)
                     .contextMenu {
@@ -238,12 +239,17 @@ struct ContentView: View {
                         Button("Change Color") {
                             showColorPickerForPromptId = prompt.id
                         }
+                        if !appState.folders.isEmpty {
+                            Button("Move to...") {
+                                promptsToMove = [prompt]
+                            }
+                        }
                         Divider()
                         Button("Delete", role: .destructive) {
                             appState.deletePrompt(prompt)
                         }
                     }
-                    .draggable(prompt.id)
+                    .contentShape(Rectangle())
                 }
             }
             .listStyle(.inset)

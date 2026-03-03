@@ -9,9 +9,14 @@ struct PromptRowView: View {
     let onCopy: () -> Void
     let onToggleFavorite: () -> Void
     let onToggleSelection: () -> Void
+    var onMoveToFolder: (() -> Void)?
 
     var body: some View {
         HStack(spacing: 8) {
+            if let onMoveToFolder {
+                MoveToFolderButton(onTap: onMoveToFolder)
+            }
+
             Button {
                 onToggleSelection()
             } label: {
@@ -52,11 +57,27 @@ struct PromptRowView: View {
         }
         .padding(.vertical, 4)
         .contentShape(Rectangle())
-        .onTapGesture {
-            onSelect()
+        .simultaneousGesture(TapGesture(count: 1).onEnded { onSelect() })
+        .simultaneousGesture(TapGesture(count: 2).onEnded { onCopy() })
+    }
+}
+
+private struct MoveToFolderButton: View {
+    @Environment(\.appTheme) private var theme
+    let onTap: () -> Void
+    @State private var isHovered = false
+
+    var body: some View {
+        Button(action: onTap) {
+            Image(systemName: "folder")
+                .font(.system(size: 12, weight: .medium))
+                .foregroundStyle(isHovered ? theme.uiAccentColor : theme.uiSecondaryTextColor)
+                .frame(minWidth: 28, minHeight: 24)
+                .contentShape(Rectangle())
+                .opacity(isHovered ? 1 : 0.7)
         }
-        .onTapGesture(count: 2) {
-            onCopy()
-        }
+        .buttonStyle(.plain)
+        .onHover { isHovered = $0 }
+        .help("Move to folder")
     }
 }
