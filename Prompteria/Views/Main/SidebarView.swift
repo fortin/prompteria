@@ -138,31 +138,25 @@ struct SidebarView: View {
         .contentShape(Rectangle())
         .draggable("folder:\(folder.id)")
         .dropDestination(for: String.self) { items, _ in
-            guard let id = items.first else { return false }
-            if id.hasPrefix("folder:") {
-                let draggedFolderId = String(id.dropFirst("folder:".count))
-                guard let fromIndex = appState.folders.firstIndex(where: { $0.id == draggedFolderId }),
-                      let toIndex = appState.folders.firstIndex(where: { $0.id == folder.id }),
-                      fromIndex != toIndex else { return false }
-                var folders = appState.folders
-                let moved = folders.remove(at: fromIndex)
-                let newToIndex = toIndex > fromIndex ? toIndex - 1 : toIndex
-                folders.insert(moved, at: newToIndex)
-                appState.setFolders(folders)
-                Task {
-                    do {
-                        try await FolderService().reorderFolders(folders)
-                        appState.refresh()
-                    } catch {
-                        appState.refresh()
-                    }
+            guard let id = items.first, id.hasPrefix("folder:") else { return false }
+            let draggedFolderId = String(id.dropFirst("folder:".count))
+            guard let fromIndex = appState.folders.firstIndex(where: { $0.id == draggedFolderId }),
+                  let toIndex = appState.folders.firstIndex(where: { $0.id == folder.id }),
+                  fromIndex != toIndex else { return false }
+            var folders = appState.folders
+            let moved = folders.remove(at: fromIndex)
+            let newToIndex = toIndex > fromIndex ? toIndex - 1 : toIndex
+            folders.insert(moved, at: newToIndex)
+            appState.setFolders(folders)
+            Task {
+                do {
+                    try await FolderService().reorderFolders(folders)
+                    appState.refresh()
+                } catch {
+                    appState.refresh()
                 }
-                return true
-            } else if let prompt = appState.prompts.first(where: { $0.id == id }) ?? appState.favorites.first(where: { $0.id == id }) {
-                appState.movePrompt(prompt, to: folder.id)
-                return true
             }
-            return false
+            return true
         }
         .contextMenu {
             Button("Rename") {
