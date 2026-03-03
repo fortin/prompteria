@@ -247,12 +247,7 @@ private enum MarkdownHighlighter {
                 textStorage.addAttribute(.foregroundColor, value: theme.syntaxUrl, range: match.range)
             }
 
-        // Strings: "..." or '...'
-        try? NSRegularExpression(pattern: "\"(?:[^\"\\\\]|\\\\.)*\"|'(?:[^'\\\\]|\\\\.)*'")
-            .enumerateMatches(in: string, range: fullRange) { match, _, _ in
-                guard let match else { return }
-                textStorage.addAttribute(.foregroundColor, value: theme.syntaxString, range: match.range)
-            }
+        // No string highlighting: prompts are Markdown; code/strings belong in backticks.
 
         // Template variables: {{var}} or {var}
         try? NSRegularExpression(pattern: "\\{\\{[^}]+\\}\\}|\\{[^}]+\\}")
@@ -261,12 +256,7 @@ private enum MarkdownHighlighter {
                 textStorage.addAttribute(.foregroundColor, value: theme.syntaxAttribute, range: match.range)
             }
 
-        // Numbers (standalone)
-        try? NSRegularExpression(pattern: "\\b\\d+\\.?\\d*\\b")
-            .enumerateMatches(in: string, range: fullRange) { match, _, _ in
-                guard let match else { return }
-                textStorage.addAttribute(.foregroundColor, value: theme.syntaxNumber, range: match.range)
-            }
+        // No number highlighting: prompts are Markdown; numbers are plain text unless in backticks.
 
         // List markers: - or * or 1.
         try? NSRegularExpression(pattern: "^(\\s*)([-*+]|\\d+\\.)\\s+", options: .anchorsMatchLines)
