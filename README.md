@@ -94,7 +94,7 @@ Prompteria supports [Hookmark](https://hookproductivity.com/) for linking prompt
 3. In **Get Address**, paste:
 
 ```applescript
-tell application "Prompteria" to get prompt address
+tell application "Prompteria" to get bookmark
 ```
 
 4. Leave **Open Item** blank—`prompteria://prompt/{id}` opens directly via the system.

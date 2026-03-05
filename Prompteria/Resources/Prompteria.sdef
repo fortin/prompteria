@@ -3,7 +3,7 @@
 <dictionary title="Prompteria Terminology">
   <suite name="Prompteria Suite" code="PROM" description="Prompteria application">
     <application name="Prompteria" description="Prompteria prompt library">
-      <property name="prompt address" code="Pcur" type="text" access="r" description="URL of the currently selected prompt"/>
+      <property name="bookmark" code="Pcur" type="text" access="r" description="URL of the currently selected prompt"/>
     </application>
   </suite>
 </dictionary>
