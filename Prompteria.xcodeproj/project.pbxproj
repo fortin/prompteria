@@ -35,6 +35,7 @@
 		AFF03CE465F56B592E16A87A /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868795CDBA855A8A1F0BFCD /* ThemeService.swift */; };
 		BD98EBDA14185168CE19D5B2 /* FillTemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93836BE0335240EFA91569AD /* FillTemplateService.swift */; };
 		C2202B976CEBA86D744BA901 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = AFDB6138273DAA274C34F03F /* Down */; };
+		C6938D5A3EE85A37614863D1 /* FetchLinkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE69019836AD35DA90E983A /* FetchLinkCommand.swift */; };
 		CE4F10368FCEA45E4C973158 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D260CC5E2D09F0C01239FD /* Prompt.swift */; };
 		CF5014294AE4E96DB222DC53 /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */; };
 		DAA1B7EDAF7AD0D21E4C0C68 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33518014AD3A6A3533DCEE7A /* DatabaseManager.swift */; };
@@ -75,6 +76,7 @@
 		95BC355BB52055EA61B48804 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		9A54640C671CA7836B861E15 /* Prompteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prompteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22FDD89B9492AFF3A1351A2 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		AEE69019836AD35DA90E983A /* FetchLinkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLinkCommand.swift; sourceTree = "<group>"; };
 		AF7A66B35EE2F22FF03E7BFF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C0CCE98009A31777E7A281AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C1B07C5008C972D1B738014F /* EmptyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyContentView.swift; sourceTree = "<group>"; };
@@ -221,11 +223,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-				BC322575CC13BABDFFD08171 /* App */ = {
+		BC322575CC13BABDFFD08171 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				358B5536AF9A61958905F0FF /* AppDelegate.swift */,
 				C0CCE98009A31777E7A281AF /* AppState.swift */,
+				AEE69019836AD35DA90E983A /* FetchLinkCommand.swift */,
 				49743759584E0D58EA10FF7C /* PrompteriaApp.swift */,
 				E2A6A433BCEDFB17F49F6AFA /* PrompteriaApplication.swift */,
 				2170EA13F5422AB7F957574B /* ScriptingBridge.swift */,
@@ -360,6 +363,7 @@
 				A2944FF878895BE733D4524C /* EmojiPickerView.swift in Sources */,
 				18D6E54A2AE1B1984E9D5343 /* EmptyContentView.swift in Sources */,
 				CF5014294AE4E96DB222DC53 /* EmptyDetailView.swift in Sources */,
+				C6938D5A3EE85A37614863D1 /* FetchLinkCommand.swift in Sources */,
 				BD98EBDA14185168CE19D5B2 /* FillTemplateService.swift in Sources */,
 				31881B89CB2F8E56B035607D /* FillTemplateView.swift in Sources */,
 				E27AE421D37F51123F01A754 /* Folder.swift in Sources */,
@@ -398,11 +402,9 @@
 				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = "0.3.11-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -480,11 +482,9 @@
 				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = "0.3.11-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
