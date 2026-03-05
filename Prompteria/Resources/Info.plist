@@ -4,6 +4,12 @@
 <dict>
     <key>CFBundleIdentifier</key>
     <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>NSAppleScriptEnabled</key>
+    <true/>
+    <key>NSPrincipalClass</key>
+    <string>PrompteriaApplication</string>
+    <key>OSAScriptingDefinition</key>
+    <string>Prompteria.sdef</string>
     <key>CFBundleURLTypes</key>
     <array>
         <dict>

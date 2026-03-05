@@ -226,6 +226,14 @@ struct ContentView: View {
                         Button("Copy Prompt") {
                             FillTemplateService.showFillTemplateWindow(prompt: prompt.prompt, title: prompt.title)
                         }
+                        Button("Link to prompt") {
+                            let urlString = "prompteria://prompt/\(prompt.id)"
+                            NSPasteboard.general.clearContents()
+                            if let url = URL(string: urlString) as NSURL? {
+                                NSPasteboard.general.writeObjects([url])
+                            }
+                            NSPasteboard.general.setString(urlString, forType: .string)
+                        }
                         Divider()
                         Button("Duplicate") {
                             appState.duplicatePrompt(prompt)

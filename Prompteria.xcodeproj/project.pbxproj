@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		237F7C7DDBB81BD81A86E9C8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCE98009A31777E7A281AF /* AppState.swift */; };
 		31881B89CB2F8E56B035607D /* FillTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BCC1542D5CDA9FA42714 /* FillTemplateView.swift */; };
 		35BD0EE4CA59457746CE340D /* ClipboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */; };
+		3CE214DB598AFE27E9023E2F /* ScriptingBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170EA13F5422AB7F957574B /* ScriptingBridge.swift */; };
 		40A4D60491523565E4C1BC1C /* FormatPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5465E49E96310321D951D3C /* FormatPreviewView.swift */; };
 		4B5B0F8B2A085ED3AE0E075D /* PromptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */; };
 		51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FDD89B9492AFF3A1351A2 /* SearchService.swift */; };
@@ -23,12 +24,14 @@
 		6E1FB332D75EFAE3AC3DCB14 /* FolderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB354A889C78E22CCDEF99F /* FolderService.swift */; };
 		719332471284E86AC59CB059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7F2E0C44EF87B954C27F82 /* Assets.xcassets */; };
 		734DEE5B0FFDA3A70B0CF8BC /* BulkActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5110333D097C14EEB3C82E /* BulkActionsView.swift */; };
+		7362A28DB95997B0ECE3F4C4 /* PrompteriaApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6A433BCEDFB17F49F6AFA /* PrompteriaApplication.swift */; };
 		74CA72BDFB2B98ADAC999CE4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A66B35EE2F22FF03E7BFF /* MainView.swift */; };
 		79DFDC0586E12232A8A79575 /* SyntaxHighlightedEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */; };
 		9B09FBA5C163050E2F92B0DE /* PromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC4A3DBED279E122C713B56 /* PromptService.swift */; };
 		9D72B02432590D347FE8E873 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD69622A5E4D76418B9B3FA /* SidebarView.swift */; };
 		A2944FF878895BE733D4524C /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA703860D201F21AACD4873 /* EmojiPickerView.swift */; };
 		ABA426EB074E8471E331B0BB /* PromptPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */; };
+		AF8A6A0B2EEF3D5386C260EE /* Prompteria.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 6A2858623BB1E4244B008C08 /* Prompteria.sdef */; };
 		AFF03CE465F56B592E16A87A /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868795CDBA855A8A1F0BFCD /* ThemeService.swift */; };
 		BD98EBDA14185168CE19D5B2 /* FillTemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93836BE0335240EFA91569AD /* FillTemplateService.swift */; };
 		C2202B976CEBA86D744BA901 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = AFDB6138273DAA274C34F03F /* Down */; };
@@ -49,6 +52,7 @@
 		03031A63E88E509C4F42DFD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DD69622A5E4D76418B9B3FA /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
+		2170EA13F5422AB7F957574B /* ScriptingBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptingBridge.swift; sourceTree = "<group>"; };
 		2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightedEditor.swift; sourceTree = "<group>"; };
 		2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPreviewView.swift; sourceTree = "<group>"; };
 		32D889699DC04A2CD65056CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		63FA22E1533D1E6ECF364255 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		6647518E36477D410BC30F65 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6868795CDBA855A8A1F0BFCD /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		6A2858623BB1E4244B008C08 /* Prompteria.sdef */ = {isa = PBXFileReference; path = Prompteria.sdef; sourceTree = "<group>"; };
 		6AA703860D201F21AACD4873 /* EmojiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
 		6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptRowView.swift; sourceTree = "<group>"; };
 		76D2323A4A623A8C5873985C /* PromptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptEditorView.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		CF5110333D097C14EEB3C82E /* BulkActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkActionsView.swift; sourceTree = "<group>"; };
 		DA0BDB50BECD8D808BC795D5 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		E1011FB5850AB04F653F2F89 /* MoveToFolderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToFolderSheet.swift; sourceTree = "<group>"; };
+		E2A6A433BCEDFB17F49F6AFA /* PrompteriaApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrompteriaApplication.swift; sourceTree = "<group>"; };
 		E5465E49E96310321D951D3C /* FormatPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatPreviewView.swift; sourceTree = "<group>"; };
 		E684626726F34D68A84AF54B /* PromptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptDetailView.swift; sourceTree = "<group>"; };
 		EEB354A889C78E22CCDEF99F /* FolderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderService.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 			children = (
 				FC7F2E0C44EF87B954C27F82 /* Assets.xcassets */,
 				32D889699DC04A2CD65056CB /* Info.plist */,
+				6A2858623BB1E4244B008C08 /* Prompteria.sdef */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 				358B5536AF9A61958905F0FF /* AppDelegate.swift */,
 				C0CCE98009A31777E7A281AF /* AppState.swift */,
 				49743759584E0D58EA10FF7C /* PrompteriaApp.swift */,
+				E2A6A433BCEDFB17F49F6AFA /* PrompteriaApplication.swift */,
+				2170EA13F5422AB7F957574B /* ScriptingBridge.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -293,6 +302,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A3E2331258607AED5196925E = {
+						DevelopmentTeam = YOUR_TEAM_ID;
+					};
+				};
 			};
 			buildConfigurationList = 06BB2A125F9B2769170BAC8A /* Build configuration list for PBXProject "Prompteria" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -306,8 +320,9 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DE7E684880124DA5FD8DAA86 /* XCRemoteSwiftPackageReference "Down" */,
-				71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */,
+				71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
 			);
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -322,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				719332471284E86AC59CB059 /* Assets.xcassets in Resources */,
+				AF8A6A0B2EEF3D5386C260EE /* Prompteria.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +374,9 @@
 				4B5B0F8B2A085ED3AE0E075D /* PromptRowView.swift in Sources */,
 				9B09FBA5C163050E2F92B0DE /* PromptService.swift in Sources */,
 				FBC0C47D827A1ADE93DAD300 /* PrompteriaApp.swift in Sources */,
+				7362A28DB95997B0ECE3F4C4 /* PrompteriaApplication.swift in Sources */,
 				050BA6D8A1B54C14CD5FE4F9 /* Schema.swift in Sources */,
+				3CE214DB598AFE27E9023E2F /* ScriptingBridge.swift in Sources */,
 				51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */,
 				5A026BBB4A3C342E5F7FDD70 /* SettingsView.swift in Sources */,
 				9D72B02432590D347FE8E873 /* SidebarView.swift in Sources */,
@@ -377,10 +395,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M2FHQ674JJ;
+				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -455,10 +475,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M2FHQ674JJ;
+				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -544,7 +566,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+		71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift";
 			requirement = {
@@ -570,7 +592,7 @@
 		};
 		EF9DAC802762DFA1AECD5CC3 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */;
+			package = 71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
 		};
 /* End XCSwiftPackageProductDependency section */

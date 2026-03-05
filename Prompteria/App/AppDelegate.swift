@@ -28,6 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         FillTemplateService.copyPromptToClipboard(promptId: id)
                     }
                 }
+            } else if url.host == "x-callback-url" {
+                handleXCallbackURL(url, application: application)
             } else if url.host == "fill-template" {
                 application.activate(ignoringOtherApps: true)
                 var prompt: String?
@@ -61,6 +63,47 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension Notification.Name {
     static let openPromptFromURL = Notification.Name("openPromptFromURL")
+}
+
+private func handleXCallbackURL(_ url: URL, application: NSApplication) {
+    let pathComponents = url.pathComponents.filter { $0 != "/" }
+    guard pathComponents.first == "get-current-prompt" else { return }
+
+    guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+          let successRaw = components.queryItems?.first(where: { $0.name == "x-success" })?.value,
+          let successURL = successRaw.removingPercentEncoding.flatMap({ URL(string: $0) }) else {
+        return
+    }
+
+    let errorURL = components.queryItems?.first(where: { $0.name == "x-error" })?.value
+        .flatMap { $0.removingPercentEncoding }
+        .flatMap { URL(string: $0) }
+
+    application.activate(ignoringOtherApps: true)
+
+    if let current = ScriptingBridge.shared.getCurrentPrompt() {
+        let promptURL = "prompteria://prompt/\(current.id)"
+        let name = current.title.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? current.title
+        let urlEncoded = promptURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? promptURL
+
+        var callbackComponents = URLComponents(url: successURL, resolvingAgainstBaseURL: false)
+        var items = callbackComponents?.queryItems ?? []
+        items.append(URLQueryItem(name: "url", value: urlEncoded))
+        items.append(URLQueryItem(name: "name", value: name))
+        callbackComponents?.queryItems = items
+
+        if let finalURL = callbackComponents?.url {
+            NSWorkspace.shared.open(finalURL)
+        }
+    } else if let errorURL {
+        var errorComponents = URLComponents(url: errorURL, resolvingAgainstBaseURL: false)
+        var items = errorComponents?.queryItems ?? []
+        items.append(URLQueryItem(name: "errorMessage", value: "No prompt selected"))
+        errorComponents?.queryItems = items
+        if let finalURL = errorComponents?.url {
+            NSWorkspace.shared.open(finalURL)
+        }
+    }
 }
 
 private func decodeBase64URL(_ string: String) -> String? {
