@@ -15,6 +15,7 @@
 		237F7C7DDBB81BD81A86E9C8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCE98009A31777E7A281AF /* AppState.swift */; };
 		31881B89CB2F8E56B035607D /* FillTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BCC1542D5CDA9FA42714 /* FillTemplateView.swift */; };
 		35BD0EE4CA59457746CE340D /* ClipboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07531BFF7F58C3B18A04C3 /* ClipboardService.swift */; };
+		3CE214DB598AFE27E9023E2F /* ScriptingBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170EA13F5422AB7F957574B /* ScriptingBridge.swift */; };
 		40A4D60491523565E4C1BC1C /* FormatPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5465E49E96310321D951D3C /* FormatPreviewView.swift */; };
 		4B5B0F8B2A085ED3AE0E075D /* PromptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9F30B5708FB574C9A8744 /* PromptRowView.swift */; };
 		51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FDD89B9492AFF3A1351A2 /* SearchService.swift */; };
@@ -49,6 +50,7 @@
 		03031A63E88E509C4F42DFD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DD69622A5E4D76418B9B3FA /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		1CF54391D12347FA8DCF99F5 /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
+		2170EA13F5422AB7F957574B /* ScriptingBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptingBridge.swift; sourceTree = "<group>"; };
 		2E1C4E4B6EAA103679EF32FD /* SyntaxHighlightedEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightedEditor.swift; sourceTree = "<group>"; };
 		2F526FB9B5FD577BC9EA4753 /* PromptPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPreviewView.swift; sourceTree = "<group>"; };
 		32D889699DC04A2CD65056CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				358B5536AF9A61958905F0FF /* AppDelegate.swift */,
 				C0CCE98009A31777E7A281AF /* AppState.swift */,
 				49743759584E0D58EA10FF7C /* PrompteriaApp.swift */,
+				2170EA13F5422AB7F957574B /* ScriptingBridge.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				9B09FBA5C163050E2F92B0DE /* PromptService.swift in Sources */,
 				FBC0C47D827A1ADE93DAD300 /* PrompteriaApp.swift in Sources */,
 				050BA6D8A1B54C14CD5FE4F9 /* Schema.swift in Sources */,
+				3CE214DB598AFE27E9023E2F /* ScriptingBridge.swift in Sources */,
 				51CC192AEF4F58B844E1F225 /* SearchService.swift in Sources */,
 				5A026BBB4A3C342E5F7FDD70 /* SettingsView.swift in Sources */,
 				9D72B02432590D347FE8E873 /* SidebarView.swift in Sources */,
@@ -380,7 +384,9 @@
 				DEVELOPMENT_TEAM = M2FHQ674JJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.11-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -458,7 +464,9 @@
 				DEVELOPMENT_TEAM = M2FHQ674JJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.11-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};

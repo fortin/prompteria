@@ -1,4 +1,5 @@
 import AppKit
+import Combine
 import Foundation
 import SwiftUI
 import UniformTypeIdentifiers
@@ -25,10 +26,28 @@ final class AppState: ObservableObject {
     private let folderService = FolderService()
     private let promptService = PromptService()
     private var refreshTask: Task<Void, Never>?
+    private var cancellables = Set<AnyCancellable>()
 
     init() {
         loadSettings()
         setupURLHandler()
+        setupScriptingBridgeSync()
+    }
+
+    private func setupScriptingBridgeSync() {
+        Publishers.CombineLatest3($selectedPromptId, $prompts, $favorites)
+            .sink { [weak self] _ in
+                self?.syncScriptingBridge()
+            }
+            .store(in: &cancellables)
+    }
+
+    private func syncScriptingBridge() {
+        if let prompt = selectedPrompt {
+            ScriptingBridge.shared.update(currentPromptId: prompt.id, currentPromptTitle: prompt.title)
+        } else {
+            ScriptingBridge.shared.update(currentPromptId: nil, currentPromptTitle: nil)
+        }
     }
 
     private func loadSettings() {
@@ -122,6 +141,8 @@ final class AppState: ObservableObject {
                 }
                 promptToOpenFromURL = nil
             }
+
+            syncScriptingBridge()
         } catch {
             print("Failed to load data: \(error)")
         }

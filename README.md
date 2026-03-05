@@ -73,9 +73,27 @@ To search prompts from Alfred:
 
 The `search_prompts.sh` script outputs Alfred JSON. The `arg` field contains the full prompt text for copying. The pre-built `Prompteria.alfredworkflow` includes template variable support: prompts with `{{ varname }}` placeholders will prompt for values in a single dialog before copying.
 
-## URL Scheme
+## Linking to Prompts
+
+You can link to any prompt for use in other apps, notes, or Hookmark.
+
+### Context Menu
+
+Right-click a prompt and choose **Link to prompt** to copy its URL (`prompteria://prompt/{id}`) to the clipboard. Paste it anywhere to create a link that opens that prompt in Prompteria.
+
+### URL Scheme
 
 - `prompteria://prompt/{id}` – Opens the app and selects the prompt with the given ID.
+
+### Hookmark Integration
+
+Prompteria supports [Hookmark](https://hookproductivity.com/) for linking prompts to other apps. To add Prompteria to Hookmark:
+
+1. Open Hookmark → **Preferences** → **Scripts**
+2. Add a new app entry for Prompteria
+3. In **Get Address**, use the x-callback-url script. Hookmark will open `prompteria://x-callback-url/get-current-prompt?x-success=...` when you invoke Copy Link with Prompteria focused; the app returns the current prompt URL via the callback.
+
+**Open Item** is not needed—`prompteria://prompt/{id}` opens directly via the system.
 
 ## MCP Server
 
