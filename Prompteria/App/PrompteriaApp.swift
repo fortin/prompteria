@@ -32,7 +32,7 @@ struct PrompteriaApp: App {
                         appState.selectedPromptIds = Set(displayed.map(\.id))
                     }
                 }
-                .keyboardShortcut("a", modifiers: .command)
+                .keyboardShortcut("a", modifiers: [.command, .option])
             }
             CommandMenu("File") {
                 Button("Export Backup...") {
