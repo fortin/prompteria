@@ -5,6 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Ensure Application Support directory exists
         _ = DatabaseManager.shared
+        ExamplesSeeder.seedIfNeeded()
     }
 
     func application(_ application: NSApplication, open urls: [URL]) {
