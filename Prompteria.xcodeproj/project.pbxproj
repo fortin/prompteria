@@ -322,14 +322,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-					A3E2331258607AED5196925E = {
-						DevelopmentTeam = YOUR_TEAM_ID;
-					};
-				};
 			};
 			buildConfigurationList = 06BB2A125F9B2769170BAC8A /* Build configuration list for PBXProject "Prompteria" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -340,9 +334,10 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DE7E684880124DA5FD8DAA86 /* XCRemoteSwiftPackageReference "Down" */,
-				71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */,
 			);
 			preferredProjectObjectVersion = 77;
+			productRefGroup = 39E2A864F53B0CBC2FFF1542 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -419,12 +414,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
+				DEVELOPMENT_TEAM = M2FHQ674JJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/../Frameworks",
-				);
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.12-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -499,12 +495,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Prompteria/Prompteria.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
+				DEVELOPMENT_TEAM = M2FHQ674JJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Prompteria/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/../Frameworks",
-				);
+				INFOPLIST_KEY_CFBundleDisplayName = Prompteria;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MARKETING_VERSION = "0.3.12-beta.1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prompteria.app;
 				SDKROOT = macosx;
 			};
@@ -590,7 +587,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift";
 			requirement = {
@@ -616,7 +613,7 @@
 		};
 		EF9DAC802762DFA1AECD5CC3 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			package = 71202EF2001E1816ADA6D764 /* XCRemoteSwiftPackageReference "GRDB" */;
 			productName = GRDB;
 		};
 /* End XCSwiftPackageProductDependency section */

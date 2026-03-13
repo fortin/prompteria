@@ -37,9 +37,13 @@ targets:
         CODE_SIGN_ENTITLEMENTS: Prompteria/Prompteria.entitlements
         LD_RUNPATH_SEARCH_PATHS:
           - "@executable_path/../Frameworks"
-        # Replace YOUR_TEAM_ID with your Apple Developer Team ID (10 chars)
-        # Find it: Xcode → Settings → Accounts → Team ID
-        DEVELOPMENT_TEAM: YOUR_TEAM_ID
+        # General → Identity (persisted so "xcodegen generate" does not reset them)
+        MARKETING_VERSION: "0.3.12-beta.1"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_KEY_CFBundleDisplayName: Prompteria
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.productivity"
+        # Signing: replace with your Team ID (Xcode → Settings → Accounts)
+        DEVELOPMENT_TEAM: M2FHQ674JJ
     dependencies:
       - package: GRDB
       - package: Down
