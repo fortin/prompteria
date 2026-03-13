@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "folder": {
+    "name": "Examples",
+    "emoji": "💡",
+    "color": "yellow"
+  },
+  "prompts": [
+    {
+      "key": "blog_post_copywriter",
+      "title": "Blog Post Copywriter",
+      "description": "Generate high-quality blog posts from a topic, tuned to a specific audience and SEO keyword.",
+      "emoji": "📝",
+      "color": "blue",
+      "role": "Senior content marketer and SEO strategist",
+      "task": "Draft a complete blog post based on the provided topic and constraints.",
+      "context": "You are helping me write a blog post for {{ AUDIENCE }} on the topic of {{ TOPIC }}. The post should be optimized to rank for the primary SEO keyword {{ SEO_KEYWORD }}.",
+      "constraints": "Target approximately {{ WORD_COUNT }} words. The tone should be informative, engaging, and trustworthy. Avoid clickbait. Use clear headings and short paragraphs.",
+      "outputFormat": "Return a fully written blog post with: a compelling title, optional subtitle, introduction, 3–7 well-structured sections with H2/H3 headings, and a concise conclusion."
+    },
+    {
+      "key": "email_copywriter",
+      "title": "Email Copywriter",
+      "description": "Draft a clear, targeted email that achieves a specific goal for a defined recipient.",
+      "emoji": "✉️",
+      "color": "green",
+      "role": "Senior lifecycle and email marketing copywriter",
+      "task": "Write a single, well-structured email based on my inputs.",
+      "context": "I need to send an email for the following purpose: {{ PURPOSE }}. The recipient can be described as: {{ RECIPIENT_DESCRIPTION }}. The overall goal of this email is: {{ GOAL }}. The key message I need to communicate is: {{ KEY_MESSAGE }}.",
+      "constraints": "Keep the email under {{ MAX_WORD_COUNT }} words. The tone should be {{ TONE }}. Avoid jargon, and make sure the call to action is explicit.",
+      "outputFormat": "Return the final email in plain text with: subject line, greeting, body paragraphs, closing, and a clear call to action."
+    },
+    {
+      "key": "code_review_assistant",
+      "title": "Code Review Assistant",
+      "description": "Review code for correctness, design, readability, and potential issues.",
+      "emoji": "👨‍💻",
+      "color": "purple",
+      "role": "Senior {{ LANGUAGE }} engineer and code reviewer",
+      "task": "Review the provided code snippet or patch and highlight issues and improvements.",
+      "context": "You are reviewing the following {{ LANGUAGE }} code: {{ CODE }}.",
+      "constraints": "Focus on correctness, clarity, performance, and maintainability. Do not rewrite everything from scratch unless necessary. Assume a reasonably experienced engineer as the reader.",
+      "outputFormat": "Respond with: (1) a short summary of overall impressions, (2) a bullet list of concrete issues or suggestions grouped by category (bugs, readability, design, performance), and (3) optional improved code snippets where helpful."
+    },
+    {
+      "key": "concept_explainer_feynman",
+      "title": "Concept Explainer (Feynman Technique)",
+      "description": "Explain a concept simply using the Feynman technique, taking into account my background.",
+      "emoji": "🎓",
+      "color": "orange",
+      "role": "Patient teacher who explains complex ideas in simple language",
+      "task": "Help me build a deep understanding of the target concept using iterative explanations.",
+      "context": "The concept I want to understand is: {{ CONCEPT }}. Here is my current understanding: {{ MY_CURRENT_UNDERSTANDING }}. My background is: {{ MY_BACKGROUND }}.",
+      "constraints": "Use plain language, concrete examples, and analogies that fit my background. Avoid unnecessary jargon and define any technical terms you must use.",
+      "outputFormat": "First, give a simple explanation as if teaching a beginner. Then ask 2–3 quick questions to probe my understanding. Finally, suggest how I could explain the concept back to you in my own words."
+    },
+    {
+      "key": "decision_matrix_builder",
+      "title": "Decision Matrix Builder",
+      "description": "Turn options and context into a decision matrix that clarifies tradeoffs.",
+      "emoji": "⚖️",
+      "color": "teal",
+      "role": "Strategy consultant helping structure decisions",
+      "task": "Build a decision matrix that compares options against clear criteria.",
+      "context": "I am choosing between {{ OPTION 1 }} and {{ OPTION_2 }}. Context: {{ CONTEXT }}. I need to make this decision by {{ TIMELINE }}. Key stakeholders: {{ KEY_STAKEHOLDERS }}.",
+      "constraints": "Focus on the most important 3–7 criteria. Be neutral and explicit about tradeoffs. Avoid recommending an option until after you have shown the matrix.",
+      "outputFormat": "Return a markdown table with rows as criteria and columns for each option plus a notes column. After the table, add a short narrative that (1) summarizes tradeoffs, and (2) makes a clear recommendation with reasoning."
+    }
+  ]
+}
