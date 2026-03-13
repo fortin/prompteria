@@ -56,6 +56,14 @@ Prompts are stored in:
 ~/Library/Application Support/Prompteria/prompts.db
 ```
 
+## Built-in Examples
+
+On first launch, Prompteria seeds an `Examples` folder with a small set of structured sample prompts.
+
+- **Source of truth**: All built-in examples are defined in `Prompteria/Resources/Examples/examples-prompts.json`.
+- **Editing examples**: Modify that JSON file and rebuild the app to change the default examples for new installs.
+- **Seeding behavior**: The app only creates the `Examples` folder if it does not already exist, so user edits to examples are preserved across launches.
+
 ## Alfred Integration
 
 To search prompts from Alfred:
